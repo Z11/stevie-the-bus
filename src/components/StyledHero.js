@@ -11,7 +11,8 @@ const StyledHero = ({ img, className, children, home }) => {
 }
 
 export default styled(StyledHero)`
-  min-height: ${props => (props.home ? "calc(100vh - 62px)" : "50vh")};
+  /* min-height controls height of hero image and impacts width */
+  min-height: ${props => (props.home ? "calc(80vh - 62px)" : "50vh")};
   background: "none";
   background-position: center;
   background-size: cover;
