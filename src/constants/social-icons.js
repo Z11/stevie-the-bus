@@ -1,18 +1,14 @@
 import React from "react"
 
-import { FaFacebook, FaTwitterSquare, FaSquarespace } from "react-icons/fa"
+import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 export default [
   {
     icon: <FaFacebook />,
-    url: "https://twitter.com",
+    url: "https://www.facebook.com/Stevie-The-Bus-105642537655254/",
   },
   {
-    icon: <FaTwitterSquare />,
-    url: "https://twitter.com",
-  },
-  {
-    icon: <FaSquarespace />,
-    url: "https://twitter.com",
+    icon: <FaInstagram />,
+    url: "https://www.instagram.com/steviethebus/",
   },
 ]
