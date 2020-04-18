@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
+import About from "../components/Home/About"
 
 export default ({ data }) => (
   <>
@@ -10,6 +11,7 @@ export default ({ data }) => (
         home="true"
         img={data.defaultBcg.childImageSharp.fluid}
       ></StyledHero>
+      <About />
     </Layout>
   </>
 )
