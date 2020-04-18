@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import About from "../components/Home/About"
+import Services from "../components/Home/Services"
 
 export default ({ data }) => (
   <>
@@ -12,6 +13,7 @@ export default ({ data }) => (
         img={data.defaultBcg.childImageSharp.fluid}
       ></StyledHero>
       <About />
+      <Services />
     </Layout>
   </>
 )

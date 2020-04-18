@@ -1,20 +1,21 @@
 import React from "react"
-import { FaWallet, FaTree, FaSocks } from "react-icons/fa"
+import { FaChurch, FaBusinessTime } from "react-icons/fa"
+import { GiGlassCelebration } from "react-icons/gi"
 
 export default [
   {
-    icon: <FaWallet />,
-    title: "saving money",
-    text: "Culpa dolore non proident adipisicing.",
+    icon: <FaChurch />,
+    title: "Weddings",
+    text: "Ready to make your wedding day amazing.",
   },
   {
-    icon: <FaTree />,
-    title: "endless hiking",
-    text: "Culpa dolore non proident adipisicing.",
+    icon: <GiGlassCelebration />,
+    title: "Private Events",
+    text: "We will capture your memories.",
   },
   {
-    icon: <FaSocks />,
-    title: "amazing comfort",
-    text: "Culpa dolore non proident adipisicing.",
+    icon: <FaBusinessTime />,
+    title: "B2B",
+    text: "Ready to do business.",
   },
 ]
