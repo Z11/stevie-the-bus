@@ -24,7 +24,7 @@ const getAbout = graphql`
 const About = () => {
   const { aboutImage } = useStaticQuery(getAbout)
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="aboutStevie">
       <div className={styles.aboutCenter}>
         <article className={styles.aboutInfo}>
           <Title title="about" subtitle="stevie"></Title>

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
@@ -34,6 +35,12 @@ const NavBar = () => {
                   <AniLink fade to={item.path}>
                     <img src={logo} alt="stevie bus logo" />
                   </AniLink>
+                </li>
+              )
+            } else if (item.type === "link") {
+              return (
+                <li key={index}>
+                  <Link to={item.id}>{item.text}</Link>
                 </li>
               )
             }

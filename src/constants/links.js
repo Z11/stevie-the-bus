@@ -1,7 +1,7 @@
 export default [
   {
     type: "link",
-    path: "/about",
+    id: "#aboutStevie",
     text: "About Stevie",
   },
   {
@@ -15,17 +15,17 @@ export default [
     text: "home",
   },
   {
-    type: "link",
+    type: "page",
     path: "/rental",
     text: "Rental",
   },
   {
-    type: "link",
+    type: "page",
     path: "/gallery",
     text: "Gallery",
   },
   {
-    type: "link",
+    type: "page",
     path: "/contact",
     text: "Contact",
   },
