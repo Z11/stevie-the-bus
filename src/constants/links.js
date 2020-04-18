@@ -1,10 +1,5 @@
 export default [
   {
-    type: "img",
-    path: "/",
-    text: "home",
-  },
-  {
     type: "link",
     path: "/about",
     text: "About Stevie",
@@ -13,6 +8,11 @@ export default [
     type: "link",
     path: "/photoBooth",
     text: "Photo Booth",
+  },
+  {
+    type: "img",
+    path: "/",
+    text: "home",
   },
   {
     type: "link",

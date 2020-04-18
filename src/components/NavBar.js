@@ -17,7 +17,6 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <img src={logo} alt="stevie bus logo" />
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
           </button>
@@ -29,42 +28,16 @@ const NavBar = () => {
               : `${styles.navLinks}`
           }
         >
-          {/* {
-            <div>
-              <AniLink fade to={links[1].path}>
-                {links[1].text}
-              </AniLink>
-            </div>
-          }
-          {
-            <div key={2}>
-              <AniLink fade to={links[2].path}>
-                {links[2].text}
-              </AniLink>
-            </div>
-          }
-          {
-            <div key={3}>
-              <AniLink fade to="/">
-                <img src={logo} alt="stevie bus logo" />
-              </AniLink>
-            </div>
-          }
-          {
-            <div key={4}>
-              <AniLink fade to={links[3].path}>
-                {links[3].text}
-              </AniLink>
-            </div>
-          }
-          {
-            <div key={5}>
-              <AniLink fade to={links[3].path}>
-                {links[3].text}
-              </AniLink>
-            </div>
-          } */}
           {links.map((item, index) => {
+            if (item.type === "img") {
+              return (
+                <li key={index}>
+                  <AniLink fade to={item.path}>
+                    <img src={logo} alt="stevie bus logo" />
+                  </AniLink>
+                </li>
+              )
+            }
             return (
               <li key={index}>
                 <AniLink fade to={item.path}>
