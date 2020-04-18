@@ -1,10 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Stevie The Photo Bus Website`,
+    description: `Kick off your next event with Stevie.`,
+    author: `Roberto Chupin`,
   },
   plugins: [
+    // With this plugin, attributes you add in their component,
+    // e.g. title, meta attributes, etc. will get added to the static HTML pages Gatsby builds.
+    // This is important not just for site viewers,
+    // but also for SEO — title and description metadata stored in the document head is a
+    // key component used by Google in determining placement in search results.
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,6 +18,10 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // Creates ImageSharp nodes from image types that are supported
+    // by the Sharp image processing library and provides fields in their
+    // GraphQL types for processing your images in a variety of ways
+    // including resizing, cropping, and creating responsive images.
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -27,6 +36,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-transition-link`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
