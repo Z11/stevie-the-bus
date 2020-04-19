@@ -18,18 +18,9 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          {links.map((item, index) => {
-            if (item.type === "img" && window.screen.width < 992) {
-              return (
-                <li key={index}>
-                  <AniLink fade to={item.path}>
-                    <img src={mobileLogo} alt="stevie bus mobile logo" />
-                  </AniLink>
-                </li>
-              )
-              return null
-            }
-          })}
+          <AniLink fade to={links[2].path} className={styles.logoBtn}>
+            <img src={mobileLogo} alt="stevie bus mobile logo" />
+          </AniLink>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
           </button>
@@ -42,9 +33,9 @@ const NavBar = () => {
           }
         >
           {links.map((item, index) => {
-            if (item.type === "img" && window.screen.width > 992) {
+            if (item.type === "img") {
               return (
-                <li key={index}>
+                <li key={index} className={styles.mainLogoBtn}>
                   <AniLink fade to={item.path}>
                     <img src={logo} alt="stevie bus logo" />
                   </AniLink>
