@@ -5,6 +5,7 @@ import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import logo from "../images/stevie-logo.jpg"
+import mobileLogo from "../images/stevie-logo-mobile.jpg"
 
 const NavBar = () => {
   const [isOpen, setNav] = useState(false)
@@ -17,6 +18,18 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
+          {links.map((item, index) => {
+            if (item.type === "img" && window.screen.width < 992) {
+              return (
+                <li key={index}>
+                  <AniLink fade to={item.path}>
+                    <img src={mobileLogo} alt="stevie bus mobile logo" />
+                  </AniLink>
+                </li>
+              )
+              return null
+            }
+          })}
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
           </button>
@@ -30,14 +43,6 @@ const NavBar = () => {
         >
           {links.map((item, index) => {
             if (item.type === "img" && window.screen.width > 992) {
-              return (
-                <li key={index}>
-                  <AniLink fade to={item.path}>
-                    <img src={logo} alt="stevie bus logo" />
-                  </AniLink>
-                </li>
-              )
-            } else if (item.type === "img" && window.screen.width < 992) {
               return (
                 <li key={index}>
                   <AniLink fade to={item.path}>
@@ -60,14 +65,7 @@ const NavBar = () => {
                 </li>
               )
             } else {
-              console.log("ELSeSESES: ", index, item)
-              return (
-                <li key={index}>
-                  <AniLink fade to={item.path}>
-                    {item.text}
-                  </AniLink>
-                </li>
-              )
+              return null
             }
           })}
         </ul>
