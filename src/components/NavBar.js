@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
@@ -29,7 +29,15 @@ const NavBar = () => {
           }
         >
           {links.map((item, index) => {
-            if (item.type === "img") {
+            if (item.type === "img" && window.screen.width > 992) {
+              return (
+                <li key={index}>
+                  <AniLink fade to={item.path}>
+                    <img src={logo} alt="stevie bus logo" />
+                  </AniLink>
+                </li>
+              )
+            } else if (item.type === "img" && window.screen.width < 992) {
               return (
                 <li key={index}>
                   <AniLink fade to={item.path}>
@@ -40,17 +48,27 @@ const NavBar = () => {
             } else if (item.type === "link") {
               return (
                 <li key={index}>
-                  <Link to={item.id}>{item.text}</Link>
+                  <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
+                </li>
+              )
+            } else if (item.type === "page") {
+              return (
+                <li key={index}>
+                  <AniLink fade to={item.path}>
+                    {item.text}
+                  </AniLink>
+                </li>
+              )
+            } else {
+              console.log("ELSeSESES: ", index, item)
+              return (
+                <li key={index}>
+                  <AniLink fade to={item.path}>
+                    {item.text}
+                  </AniLink>
                 </li>
               )
             }
-            return (
-              <li key={index}>
-                <AniLink fade to={item.path}>
-                  {item.text}
-                </AniLink>
-              </li>
-            )
           })}
         </ul>
       </div>

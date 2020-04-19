@@ -5,7 +5,7 @@ import services from "../../constants/services"
 
 const Services = () => {
   return (
-    <section className={styles.services}>
+    <section className={styles.services} id="servicesStevie">
       <Title title="our" subtitle="services" />
       <div className={styles.center}>
         {services.map((item, index) => {

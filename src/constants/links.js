@@ -1,23 +1,18 @@
 export default [
   {
     type: "link",
-    id: "#aboutStevie",
-    text: "About Stevie",
+    id: "aboutStevie",
+    text: "About",
   },
   {
     type: "link",
-    path: "/photoBooth",
-    text: "Photo Booth",
+    id: "servicesStevie",
+    text: "Services",
   },
   {
     type: "img",
     path: "/",
     text: "home",
-  },
-  {
-    type: "page",
-    path: "/rental",
-    text: "Rental",
   },
   {
     type: "page",
