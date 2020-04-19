@@ -5,6 +5,7 @@ import socialIcons from "../constants/social-icons"
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      Follow Us
       <div className={styles.icons}>
         {socialIcons.map((item, index) => {
           return (
