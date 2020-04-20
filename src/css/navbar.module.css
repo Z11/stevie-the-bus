@@ -30,16 +30,21 @@
     height: 216px;
   }
   .nav-header {
+    position: fixed;
     height: 100px;
     background-color: var(--mainWhite);
+    width: 100%;
+    box-sizing: border-box;
   }
   .navbar {
-    position: fixed;
     z-index: 999;
+    width: 100%;
+    height: 100px;
     width: 100%;
     box-sizing: border-box;
   }
   .nav-links {
+    top: 100px;
     position: fixed;
     z-index: 999;
     width: 100%;
