@@ -11,9 +11,6 @@
   overflow: hidden;
   background-color: var(--mainWhite);
 }
-.show-nav {
-  height: 216px;
-}
 .nav-links a {
   display: block;
   padding: 1rem 1.25rem;
@@ -28,10 +25,26 @@
   color: var(--primaryColor);
 }
 @media screen and (max-width: 800px) {
+  /* shows ancherlinks and pagelinks*/
+  .show-nav {
+    height: 216px;
+  }
+  .nav-header {
+    height: 100px;
+    background-color: var(--mainWhite);
+  }
   .navbar {
-    padding: 0 2rem;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .nav-links {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
   }
   .logo-btn {
     background: transparent;
