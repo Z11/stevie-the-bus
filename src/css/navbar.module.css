@@ -9,6 +9,7 @@
   transition: var(--mainTransition);
   height: 0;
   overflow: hidden;
+  background-color: var(--mainWhite);
 }
 .show-nav {
   height: 216px;
@@ -51,19 +52,14 @@
 
 @media screen and (min-width: 800px) {
   .nav-header {
-    height: 180px;
-  }
-  .nav-backfiller {
-    left: 0;
-    position: fixed;
-    padding: 0rem 300rem;
-    height: 180px;
-    background-color: var(--mainWhite);
-    z-index: 999;
+    height: 160px;
   }
   .nav-links {
+    top: 0;
     position: fixed;
     z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
   }
   .logo-btn {
     display: none;
