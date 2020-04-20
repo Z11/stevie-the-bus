@@ -18,12 +18,18 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <AniLink fade to={links[2].path} className={styles.logoBtn}>
-            <img src={mobileLogo} alt="stevie bus mobile logo" />
-          </AniLink>
-          <button type="button" className={styles.logoBtn} onClick={toggleNav}>
-            <FaAlignRight className={styles.logoIcon} />
-          </button>
+          <div className={styles.navBackfiller}>
+            <AniLink fade to={links[2].path} className={styles.logoBtn}>
+              <img src={mobileLogo} alt="stevie bus mobile logo" />
+            </AniLink>
+            <button
+              type="button"
+              className={styles.logoBtn}
+              onClick={toggleNav}
+            >
+              <FaAlignRight className={styles.logoIcon} />
+            </button>
+          </div>
         </div>
         <ul
           className={

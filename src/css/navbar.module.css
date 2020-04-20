@@ -4,7 +4,6 @@
   align-items: center;
   padding: 1rem 1.25rem;
 }
-
 .nav-links {
   list-style-type: none;
   transition: var(--mainTransition);
@@ -51,6 +50,21 @@
 }
 
 @media screen and (min-width: 800px) {
+  .nav-header {
+    height: 180px;
+  }
+  .nav-backfiller {
+    left: 0;
+    position: fixed;
+    padding: 0rem 300rem;
+    height: 180px;
+    background-color: var(--mainWhite);
+    z-index: 999;
+  }
+  .nav-links {
+    position: fixed;
+    z-index: 999;
+  }
   .logo-btn {
     display: none;
   }
