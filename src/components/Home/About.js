@@ -4,10 +4,11 @@ import styles from "../../css/about.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-// this is causing laxzy load warnigs:
+// this is causing lazy load warnigs:
 // [Intervention] An <img> element was lazyloaded with loading=lazy,
 // but had no dimensions specified. Specifying dimensions improves performance.
 // See https://crbug.com/954323
+// git hub issue: https://github.com/gatsbyjs/gatsby/issues/17506
 
 const getAbout = graphql`
   query aboutImage {
@@ -33,7 +34,6 @@ const About = () => {
         </article>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
-            {/* <img src={img} alt="about company" /> */}
             <Img
               fluid={aboutImage.childImageSharp.fluid}
               alt="awesome landscape"
