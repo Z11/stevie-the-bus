@@ -78,6 +78,25 @@
     z-index: 990;
     width: 100%;
     box-sizing: border-box;
+    height: auto;
+    display: flex;
+    vertical-align: bottom; /* Align the element to the bottom   */
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .nav-social {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 990;
+    display: flex;
+    background-color: transparent;
+  }
+  .nav-social a {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: var(--mainBlack);
+    transition: var(--mainTransition);
   }
   .logo-btn {
     display: none;
@@ -88,13 +107,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .nav-links {
-    height: auto;
-    display: flex;
-    vertical-align: bottom; /* Align the element to the bottom   */
-    justify-content: center;
-    align-items: flex-end;
   }
   .main-logo-btn {
     background: transparent;

@@ -4,6 +4,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
+import socialIcons from "../constants/social-icons"
 import logo from "../images/stevie-logo.jpg"
 import mobileLogo from "../images/stevie-logo-mobile.jpg"
 
@@ -74,6 +75,20 @@ const NavBar = () => {
             }
           })}
         </ul>
+        <div className={styles.navSocial}>
+          {socialIcons.map((item, index) => {
+            return (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.icon}
+              </a>
+            )
+          })}
+        </div>
       </div>
     </nav>
   )
