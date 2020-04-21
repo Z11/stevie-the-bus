@@ -18,7 +18,7 @@
   text-transform: capitalize;
   color: var(--mainBlack);
   transition: var(--mainTransition);
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
@@ -73,9 +73,9 @@
     height: 160px;
   }
   .nav-links {
-    top: 0;
+    left: 0;
     position: fixed;
-    z-index: 999;
+    z-index: 990;
     width: 100%;
     box-sizing: border-box;
   }

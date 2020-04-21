@@ -25,54 +25,56 @@ const NavBar = () => {
             <FaAlignRight className={styles.logoIcon} />
           </button>
         </div>
-      </div>
-      <ul
-        className={
-          isOpen ? `${styles.navLinks} ${styles.showNav}` : `${styles.navLinks}`
-        }
-      >
-        {links.map((item, index) => {
-          if (item.type === "img") {
-            return (
-              <li key={index} className={styles.mainLogoBtn}>
-                <AniLink fade to={item.path}>
-                  <img src={logo} alt="stevie bus logo" />
-                </AniLink>
-              </li>
-            )
-          } else if (item.type === "link") {
-            return (
-              <li key={index}>
-                <div
-                  role="button"
-                  tabIndex={index}
-                  onClick={toggleNav}
-                  onKeyDown={() => {}}
-                >
-                  <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
-                </div>
-              </li>
-            )
-          } else if (item.type === "page") {
-            return (
-              <li key={index}>
-                <div
-                  role="button"
-                  tabIndex={index}
-                  onClick={toggleNav}
-                  onKeyDown={() => {}}
-                >
-                  <AniLink fade to={item.path}>
-                    {item.text}
-                  </AniLink>
-                </div>
-              </li>
-            )
-          } else {
-            return null
+        <ul
+          className={
+            isOpen
+              ? `${styles.navLinks} ${styles.showNav}`
+              : `${styles.navLinks}`
           }
-        })}
-      </ul>
+        >
+          {links.map((item, index) => {
+            if (item.type === "img") {
+              return (
+                <li key={index} className={styles.mainLogoBtn}>
+                  <AniLink fade to={item.path}>
+                    <img src={logo} alt="stevie bus logo" />
+                  </AniLink>
+                </li>
+              )
+            } else if (item.type === "link") {
+              return (
+                <li key={index}>
+                  <div
+                    role="button"
+                    tabIndex={index}
+                    onClick={toggleNav}
+                    onKeyDown={() => {}}
+                  >
+                    <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
+                  </div>
+                </li>
+              )
+            } else if (item.type === "page") {
+              return (
+                <li key={index}>
+                  <div
+                    role="button"
+                    tabIndex={index}
+                    onClick={toggleNav}
+                    onKeyDown={() => {}}
+                  >
+                    <AniLink fade to={item.path}>
+                      {item.text}
+                    </AniLink>
+                  </div>
+                </li>
+              )
+            } else {
+              return null
+            }
+          })}
+        </ul>
+      </div>
     </nav>
   )
 }
