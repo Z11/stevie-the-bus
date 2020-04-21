@@ -42,16 +42,30 @@ const NavBar = () => {
             )
           } else if (item.type === "link") {
             return (
-              <li key={index} onClick={toggleNav}>
-                <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
+              <li key={index}>
+                <div
+                  role="button"
+                  tabIndex={index}
+                  onClick={toggleNav}
+                  onKeyDown={() => {}}
+                >
+                  <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
+                </div>
               </li>
             )
           } else if (item.type === "page") {
             return (
-              <li key={index} onClick={toggleNav}>
-                <AniLink fade to={item.path}>
-                  {item.text}
-                </AniLink>
+              <li key={index}>
+                <div
+                  role="button"
+                  tabIndex={index}
+                  onClick={toggleNav}
+                  onKeyDown={() => {}}
+                >
+                  <AniLink fade to={item.path}>
+                    {item.text}
+                  </AniLink>
+                </div>
               </li>
             )
           } else {
