@@ -86,7 +86,7 @@
   }
   .nav-social {
     position: fixed;
-    right: 0;
+    right: 50px;
     top: 0;
     z-index: 990;
     display: flex;
@@ -94,7 +94,7 @@
   }
   .nav-social a {
     display: block;
-    padding: 1rem 1.25rem;
+    padding: 1rem 0.25rem;
     color: var(--mainBlack);
     transition: var(--mainTransition);
   }
