@@ -75,7 +75,7 @@ const NavBar = () => {
             }
           })}
         </ul>
-        <div className={styles.navSocial}>
+        <div className={styles.icons}>
           {socialIcons.map((item, index) => {
             return (
               <a
