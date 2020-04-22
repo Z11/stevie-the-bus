@@ -12,12 +12,12 @@ import Img from "gatsby-image"
 const getDesktopBusLogo = graphql`
   query desktopBusLogo {
     desktopBusLogo: file(
-      relativePath: { eq: "stevie-the-photo-bus-logo-smaller.png" }
+      relativePath: { eq: "stevie-the-photo-bus-logo-smaller.jpg" }
     ) {
       childImageSharp {
         fixed(width: 200) {
           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
