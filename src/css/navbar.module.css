@@ -93,9 +93,12 @@
   }
   .icons a {
     display: block;
-    padding: 1rem 0.25rem;
+    margin: 1rem 0.25rem;
     color: var(--mainBlue);
     transition: var(--mainTransition);
+  }
+  .icons a:hover {
+    color: var(--mainYellow);
   }
   .logo-btn {
     display: none;
