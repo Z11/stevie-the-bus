@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
 }
 .nav-links {
   list-style-type: none;
@@ -70,7 +69,7 @@
 
 @media screen and (min-width: 800px) {
   .nav-header {
-    height: 160px;
+    height: 100px;
   }
   .nav-links {
     left: 0;

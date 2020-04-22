@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
@@ -7,25 +6,24 @@ import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
 import mobileBusLogo from "../images/stevie-logo-mobile.jpg"
-import Img from "gatsby-image"
+import desktopBusLogo from "../images/stevie-the-photo-bus-logo-desktop.png"
 
-const getDesktopBusLogo = graphql`
-  query desktopBusLogo {
-    desktopBusLogo: file(
-      relativePath: { eq: "stevie-the-photo-bus-logo-smaller.jpg" }
-    ) {
-      childImageSharp {
-        fixed(width: 200) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
-      }
-    }
-  }
-`
+// const getDesktopBusLogo = graphql`
+//   query desktopBusLogo {
+//     desktopBusLogo: file(
+//       relativePath: { eq: "stevie-the-photo-bus-logo-desktop.png" }
+//     ) {
+//       childImageSharp {
+//         fixed(width: 200) {
+//           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+//           ...GatsbyImageSharpFixed_withWebp_noBase64
+//         }
+//       }
+//     }
+//   }
+// `
 
 const NavBar = () => {
-  const { desktopBusLogo } = useStaticQuery(getDesktopBusLogo)
   const [isOpen, setNav] = useState(false)
 
   const toggleNav = () => {
@@ -55,10 +53,7 @@ const NavBar = () => {
               return (
                 <li key={index} className={styles.mainLogoBtn}>
                   <AniLink fade to={item.path}>
-                    <Img
-                      fixed={desktopBusLogo.childImageSharp.fixed}
-                      alt="awesome landscape"
-                    />
+                    <img src={desktopBusLogo} alt="desktop Bus Logo" />
                   </AniLink>
                 </li>
               )
