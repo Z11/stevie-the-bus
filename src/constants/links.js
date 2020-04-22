@@ -6,8 +6,8 @@ export default [
   },
   {
     type: "link",
-    id: "servicesStevie",
-    text: "Services",
+    id: "packagesStevie",
+    text: "Packages",
   },
   {
     type: "img",
