@@ -8,9 +8,10 @@
 .about-img {
   margin: 3rem 0;
 }
-.about-info {
+/*Adds padding to top of content*/
+/* .about-info { 
   margin-top: 3rem;
-}
+} */
 .about-img {
   position: relative;
 }
