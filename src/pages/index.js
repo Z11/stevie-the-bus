@@ -20,10 +20,10 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "hero-background.jpg" }) {
+    defaultBcg: file(relativePath: { eq: "stevie-the-bus-homepage-hero.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(quality: 100, maxWidth: 1500) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
