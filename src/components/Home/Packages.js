@@ -6,7 +6,7 @@ import packages from "../../constants/packages"
 const Packages = () => {
   return (
     <section className={styles.packages} id="packagesStevie">
-      <Title title="our" subtitle="packages" />
+      <Title title="Our Packages" position="center" />
       <div className={styles.center}>
         {packages.map((item, index) => {
           return (

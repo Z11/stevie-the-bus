@@ -14,7 +14,7 @@ const getAbout = graphql`
   query aboutImage {
     aboutImage: file(relativePath: { eq: "stevie-the-photo-bus-moon.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 600) {
+        fluid(quality: 100, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -24,19 +24,21 @@ const getAbout = graphql`
 
 const About = () => {
   const { aboutImage } = useStaticQuery(getAbout)
+  console.log(styles)
   return (
     <section className={styles.about} id="aboutStevie">
       <div className={styles.aboutCenter}>
         <article className={styles.aboutInfo}>
-          <Title title="about" subtitle="stevie"></Title>
+          <Title title="Meet Stevie!" position="left"></Title>
+          <hr className={styles.border} />
           <p>Cillum amet aute ad tempor do enim.</p>
           <p>Cillum amet aute ad tempor do enim.</p>
         </article>
         <article className={styles.aboutImg}>
-          <div className={styles.imgContainer}>
+          <div>
             <Img
               fluid={aboutImage.childImageSharp.fluid}
-              alt="awesome landscape"
+              alt="Meet Stevie Photo"
             />
           </div>
         </article>

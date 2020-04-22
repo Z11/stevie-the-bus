@@ -26,7 +26,14 @@
 }
 .about-info h4 {
   font-size: 1.9rem;
-  text-transform: uppercase;
+}
+.border {
+  border: 5px var(--mainBlue);
+  border-radius: 5px;
+  margin: 1rem 0;
+  height: 3.5px;
+  width: 100%;
+  background-color: var(--mainBlue);
 }
 
 @media screen and (min-width: 768px) {
