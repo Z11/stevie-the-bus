@@ -1,14 +1,31 @@
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
-import logo from "../images/stevie-logo.jpg"
-import mobileLogo from "../images/stevie-logo-mobile.jpg"
+import mobileBusLogo from "../images/stevie-logo-mobile.jpg"
+import Img from "gatsby-image"
+
+const getDesktopBusLogo = graphql`
+  query desktopBusLogo {
+    desktopBusLogo: file(
+      relativePath: { eq: "stevie-the-photo-bus-logo-smaller.png" }
+    ) {
+      childImageSharp {
+        fixed(width: 200) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`
 
 const NavBar = () => {
+  const { desktopBusLogo } = useStaticQuery(getDesktopBusLogo)
   const [isOpen, setNav] = useState(false)
 
   const toggleNav = () => {
@@ -20,7 +37,7 @@ const NavBar = () => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <AniLink fade to={links[2].path} className={styles.logoBtn}>
-            <img src={mobileLogo} alt="stevie bus mobile logo" />
+            <img src={mobileBusLogo} alt="stevie bus mobile logo" />
           </AniLink>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
@@ -38,7 +55,10 @@ const NavBar = () => {
               return (
                 <li key={index} className={styles.mainLogoBtn}>
                   <AniLink fade to={item.path}>
-                    <img src={logo} alt="stevie bus logo" />
+                    <Img
+                      fixed={desktopBusLogo.childImageSharp.fixed}
+                      alt="awesome landscape"
+                    />
                   </AniLink>
                 </li>
               )
