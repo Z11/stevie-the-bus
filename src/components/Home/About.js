@@ -14,7 +14,7 @@ const getAbout = graphql`
   query aboutImage {
     aboutImage: file(relativePath: { eq: "stevie-the-photo-bus-moon.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 600) {
+        fluid(quality: 100, maxWidth: 500) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
