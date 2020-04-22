@@ -94,7 +94,7 @@
   .icons a {
     display: block;
     padding: 1rem 0.25rem;
-    color: var(--mainBlack);
+    color: var(--mainBlue);
     transition: var(--mainTransition);
   }
   .logo-btn {
