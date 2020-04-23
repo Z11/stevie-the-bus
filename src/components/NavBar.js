@@ -6,7 +6,8 @@ import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
 import mobileBusLogo from "../images/stevie-logo-mobile.jpg"
-import desktopBusLogo from "../images/stevie-the-photo-bus-logo-desktop.png"
+import desktopBusLogoWebp from "../images/stevie-the-photo-bus-logo-desktop.webp"
+import desktopBusLogoPng from "../images/stevie-the-photo-bus-logo-desktop.png"
 
 // const getDesktopBusLogo = graphql`
 //   query desktopBusLogo {
@@ -25,6 +26,23 @@ import desktopBusLogo from "../images/stevie-the-photo-bus-logo-desktop.png"
 
 const NavBar = () => {
   const [isOpen, setNav] = useState(false)
+
+  // check if its safari
+  const isSafari = () => {
+    if (typeof window !== "undefined") {
+      return (
+        /constructor/i.test(window["HTMLElement"]) ||
+        (function (p) {
+          return p.toString() === "[object SafariRemoteNotification]"
+        })(
+          !window["safari"] ||
+            (typeof window["safari"] !== "undefined" &&
+              window["safari"].pushNotification)
+        )
+      )
+    }
+    return false
+  }
 
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
@@ -53,7 +71,10 @@ const NavBar = () => {
               return (
                 <li key={index} className={styles.mainLogoBtn}>
                   <AniLink fade to={item.path}>
-                    <img src={desktopBusLogo} alt="desktop Bus Logo" />
+                    <img
+                      src={isSafari() ? desktopBusLogoPng : desktopBusLogoWebp}
+                      alt="desktop Bus Logo"
+                    />
                   </AniLink>
                 </li>
               )
