@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Title = ({ title, subtitle, className, position }) => {
+const Title = ({ title, subtitle, className }) => {
   return (
     <div className={className}>
       <h4>
