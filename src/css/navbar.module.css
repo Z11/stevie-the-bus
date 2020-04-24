@@ -9,8 +9,6 @@
   height: 0;
   overflow: hidden;
   background-color: var(--mainWhite);
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
 }
 .nav-links a {
   display: block;
@@ -19,7 +17,6 @@
   text-transform: capitalize;
   color: var(--mainBlack);
   transition: var(--mainTransition);
-  font-weight: 600;
   letter-spacing: var(--mainSpacing);
   border: none;
   outline: none;
@@ -114,6 +111,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
   }
   .main-logo-btn {
     background: transparent;
