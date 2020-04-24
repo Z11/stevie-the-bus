@@ -1,49 +1,40 @@
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
-import mobileBusLogo from "../images/stevie-logo-mobile.jpg"
-import desktopBusLogoWebp from "../images/stevie-the-photo-bus-logo-desktop.webp"
-import desktopBusLogoPng from "../images/stevie-the-photo-bus-logo-desktop.png"
 
-// const getDesktopBusLogo = graphql`
-//   query desktopBusLogo {
-//     desktopBusLogo: file(
-//       relativePath: { eq: "stevie-the-photo-bus-logo-desktop.png" }
-//     ) {
-//       childImageSharp {
-//         fixed(width: 200) {
-//           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-//           ...GatsbyImageSharpFixed_withWebp_noBase64
-//         }
-//       }
-//     }
-//   }
-// `
+const getBusLogo = graphql`
+  query busLogo {
+    desktopBusLogo: file(
+      relativePath: { eq: "stevie-the-photo-bus-logo-desktop.png" }
+    ) {
+      childImageSharp {
+        fixed(width: 150) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+    mobileBusLogo: file(relativePath: { eq: "stevie-logo-mobile.jpg" }) {
+      childImageSharp {
+        fixed(width: 100) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+  }
+`
 
 const NavBar = () => {
+  const { desktopBusLogo, mobileBusLogo } = useStaticQuery(getBusLogo)
+
   const [isOpen, setNav] = useState(false)
-
-  // check if its safari
-  const isSafari = () => {
-    if (typeof window !== "undefined") {
-      return (
-        /constructor/i.test(window["HTMLElement"]) ||
-        (function (p) {
-          return p.toString() === "[object SafariRemoteNotification]"
-        })(
-          !window["safari"] ||
-            (typeof window["safari"] !== "undefined" &&
-              window["safari"].pushNotification)
-        )
-      )
-    }
-    return false
-  }
-
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
@@ -53,7 +44,10 @@ const NavBar = () => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <AniLink fade to={links[2].path} className={styles.logoBtn}>
-            <img src={mobileBusLogo} alt="stevie bus mobile logo" />
+            <Img
+              fixed={mobileBusLogo.childImageSharp.fixed}
+              alt="mobile bus logo"
+            />
           </AniLink>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
@@ -71,9 +65,9 @@ const NavBar = () => {
               return (
                 <li key={index} className={styles.mainLogoBtn}>
                   <AniLink fade to={item.path}>
-                    <img
-                      src={isSafari() ? desktopBusLogoPng : desktopBusLogoWebp}
-                      alt="desktop Bus Logo"
+                    <Img
+                      fixed={desktopBusLogo.childImageSharp.fixed}
+                      alt="desktop bus logo"
                     />
                   </AniLink>
                 </li>
