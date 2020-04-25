@@ -20,7 +20,7 @@ export default function contact({ data }) {
   return (
     <Layout>
       <StyledHero img={data.contactBcg.childImageSharp.fluid} />
-      <Contact></Contact>
+      <Contact />
     </Layout>
   )
 }
