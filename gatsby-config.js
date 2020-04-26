@@ -53,6 +53,12 @@ module.exports = {
         offset: -60,
       },
     },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+      },
+    },
     `gatsby-plugin-styled-components`,
   ],
 }
