@@ -4,20 +4,17 @@ import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
-import { Profiler } from "react"
 
 export default props => (
   <>
-    <Profiler id={props.someUniqueId}>
-      <Layout>
-        <StyledHero
-          home="true"
-          img={props.data.defaultBcg.childImageSharp.fluid}
-        ></StyledHero>
-        <About />
-        <Services />
-      </Layout>
-    </Profiler>
+    <Layout>
+      <StyledHero
+        home="true"
+        img={props.data.defaultBcg.childImageSharp.fluid}
+      ></StyledHero>
+      <About />
+      <Services />
+    </Layout>
   </>
 )
 
