@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
@@ -43,12 +43,12 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <AniLink fade to={links[2].path} className={styles.logoBtn}>
+          <Link to={links[2].path} className={styles.logoBtn}>
             <Img
               fixed={mobileBusLogo.childImageSharp.fixed}
               alt="mobile bus logo"
             />
-          </AniLink>
+          </Link>
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
             <FaAlignRight className={styles.logoIcon} />
           </button>
@@ -64,12 +64,12 @@ const NavBar = () => {
             if (item.type === "img") {
               return (
                 <li key={index} className={styles.mainLogoBtn}>
-                  <AniLink fade to={item.path}>
+                  <Link to={item.path}>
                     <Img
                       fixed={desktopBusLogo.childImageSharp.fixed}
                       alt="desktop bus logo"
                     />
-                  </AniLink>
+                  </Link>
                 </li>
               )
             } else if (item.type === "link") {
@@ -94,9 +94,7 @@ const NavBar = () => {
                     onClick={toggleNav}
                     onKeyDown={() => {}}
                   >
-                    <AniLink fade to={item.path}>
-                      {item.text}
-                    </AniLink>
+                    <Link to={item.path}>{item.text}</Link>
                   </div>
                 </li>
               )
