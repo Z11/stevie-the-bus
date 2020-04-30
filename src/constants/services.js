@@ -1,10 +1,10 @@
 import React from "react"
-import { FaChurch, FaBusinessTime } from "react-icons/fa"
+import { FaHeart, FaBusinessTime } from "react-icons/fa"
 import { GiGlassCelebration } from "react-icons/gi"
 
 export default [
   {
-    icon: <FaChurch />,
+    icon: <FaHeart />,
     title: "Weddings",
     text: "Ready to make your wedding day amazing.",
   },
