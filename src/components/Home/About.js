@@ -11,11 +11,18 @@ import Img from "gatsby-image"
 // git hub issue: https://github.com/gatsbyjs/gatsby/issues/17506
 
 const getAbout = graphql`
-  query aboutImage {
-    aboutImage: file(relativePath: { eq: "stevie-the-photo-bus-moon.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp
+  query {
+    prismic {
+      home_page(uid: "home_page_slug", lang: "en-us") {
+        about_title
+        about_text
+        about_image
+        about_imageSharp {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 2000) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
         }
       }
     }
@@ -23,20 +30,22 @@ const getAbout = graphql`
 `
 
 const About = () => {
-  const { aboutImage } = useStaticQuery(getAbout)
+  const { about_imageSharp, about_text, about_title } = useStaticQuery(
+    getAbout
+  ).prismic.home_page
+
   return (
     <section className={styles.about} id="aboutStevie">
       <div className={styles.aboutCenter}>
         <article className={styles.aboutInfo}>
-          <Title title="Meet Stevie!" position="left"></Title>
+          <Title title={about_title[0].text} position="left"></Title>
           <hr className={styles.border} />
-          <p>Cillum amet aute ad tempor do enim.</p>
-          <p>Cillum amet aute ad tempor do enim.</p>
+          <p>{about_text[0].text}</p>
         </article>
         <article className={styles.aboutImg}>
           <div>
             <Img
-              fluid={aboutImage.childImageSharp.fluid}
+              fluid={about_imageSharp.childImageSharp.fluid}
               alt="Meet Stevie Photo"
             />
           </div>
