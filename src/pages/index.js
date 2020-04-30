@@ -4,6 +4,7 @@ import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
+import Packages from "../components/Home/Packages"
 
 export default props => (
   <>
@@ -14,6 +15,7 @@ export default props => (
       ></StyledHero>
       <About />
       <Services />
+      <Packages />
     </Layout>
   </>
 )
