@@ -54,11 +54,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-prismic-graphql`,
+      options: {
+        repositoryName: "steviethephotobus",
+      },
+    },
+    {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {
         devMode: true,
       },
     },
+    `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
   ],
 }
