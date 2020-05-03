@@ -9,22 +9,23 @@ import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
 
 const getBusLogo = graphql`
-  query busLogo {
-    desktopBusLogo: file(
-      relativePath: { eq: "stevie-the-photo-bus-logo-desktop.png" }
-    ) {
-      childImageSharp {
-        fixed(width: 150) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyImageSharpFixed_withWebp_noBase64
+  query {
+    prismic {
+      home_page(uid: "home_page_slug", lang: "en-us") {
+        stevie_logo_desktop_image
+        desktopBusLogo: stevie_logo_desktop_imageSharp {
+          childImageSharp {
+            fixed(width: 150) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
+            }
+          }
         }
-      }
-    }
-    mobileBusLogo: file(relativePath: { eq: "stevie-logo-mobile.jpg" }) {
-      childImageSharp {
-        fixed(width: 100) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyImageSharpFixed_withWebp_noBase64
+        mobileBusLogo: stevie_logo_desktop_imageSharp {
+          childImageSharp {
+            fixed(width: 90) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
+            }
+          }
         }
       }
     }
@@ -32,7 +33,9 @@ const getBusLogo = graphql`
 `
 
 const NavBar = () => {
-  const { desktopBusLogo, mobileBusLogo } = useStaticQuery(getBusLogo)
+  const { desktopBusLogo, mobileBusLogo } = useStaticQuery(
+    getBusLogo
+  ).prismic.home_page
 
   const [isOpen, setNav] = useState(false)
   const toggleNav = () => {
