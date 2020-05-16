@@ -1,5 +1,5 @@
 .packages {
-  background: var(--mainYellow);
+  background: var(--mainWhite);
   padding: 4rem 0;
 }
 .center {
@@ -22,4 +22,13 @@
 }
 .package h4 {
   text-transform: uppercase;
+}
+
+.serviceText {
+  padding: 2rem;
+  background: var(--mainYellow);
+}
+
+.serviceBorderText {
+  padding: 0rem 1rem;
 }
