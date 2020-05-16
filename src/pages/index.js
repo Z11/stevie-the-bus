@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
 import Packages from "../components/Home/Packages"
+import EveryPackageDetail from "../components/Home/EveryPackageDetail"
 
 export default props => (
   <>
@@ -19,6 +20,7 @@ export default props => (
       <About />
       <Services />
       <Packages />
+      <EveryPackageDetail />
     </Layout>
   </>
 )
