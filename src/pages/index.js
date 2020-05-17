@@ -6,6 +6,7 @@ import About from "../components/Home/About"
 import Services from "../components/Home/Services"
 import Packages from "../components/Home/Packages"
 import EveryPackageDetail from "../components/Home/EveryPackageDetail"
+import Rent from "../components/Home/Rent"
 
 export default props => (
   <>
@@ -21,6 +22,7 @@ export default props => (
       <Services />
       <Packages />
       <EveryPackageDetail />
+      <Rent />
     </Layout>
   </>
 )
