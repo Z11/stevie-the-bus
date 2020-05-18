@@ -4,6 +4,12 @@ import styles from "../../css/rent.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+// this is causing lazy load warnigs:
+// [Intervention] An <img> element was lazyloaded with loading=lazy,
+// but had no dimensions specified. Specifying dimensions improves performance.
+// See https://crbug.com/954323
+// git hub issue: https://github.com/gatsbyjs/gatsby/issues/17506
+
 const getRent = graphql`
   query {
     prismic {
@@ -29,27 +35,25 @@ const Rent = () => {
   ).prismic.home_page
 
   return (
-    <div>
-      <hr className={styles.border} />
-      <section className={styles.rent} id="aboutStevie">
-        <Title title={rent_title[0].text} position="center"></Title>
-        <div className={styles.rentCenter}>
-          <article className={styles.rentImg}>
-            <div>
-              <Img
-                fluid={rent_imageSharp.childImageSharp.fluid}
-                alt="Meet Stevie Photo"
-              />
-            </div>
-          </article>
-          <article className={styles.rentInfo}>
-            {rent_text.map(element => {
-              return <p>{element.text}</p>
-            })}
-          </article>
-        </div>
-      </section>
-    </div>
+    <section className={styles.rent} id="rentStevie">
+      <div className={styles.rentCenter}>
+        <article className={styles.rentImg}>
+          <div>
+            <Img
+              fluid={rent_imageSharp.childImageSharp.fluid}
+              alt="Meet Stevie Photo"
+            />
+          </div>
+        </article>
+        <article className={styles.rentInfo}>
+          <Title title={rent_title[0].text} position="left"></Title>
+          <hr className={styles.border} />
+          {rent_text.map(element => {
+            return <p>{element.text}</p>
+          })}
+        </article>
+      </div>
+    </section>
   )
 }
 
