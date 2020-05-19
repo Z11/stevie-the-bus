@@ -115,8 +115,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
+    animation: fadeIn ease 1.5s;
+    -webkit-animation: fadeIn ease 1.5s;
   }
   .main-logo-btn {
     background: transparent;
