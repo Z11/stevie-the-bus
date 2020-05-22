@@ -53,8 +53,6 @@ const Packages = () => {
     package_3_text,
   } = useStaticQuery(getPackages).prismic.home_page
 
-  console.log(useStaticQuery(getPackages).prismic.home_page)
-
   return (
     <section className={styles.packages}>
       <Title title={packages_main_title[0].text} position="center" />
