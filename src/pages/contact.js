@@ -6,10 +6,16 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   query {
-    contactBcg: file(relativePath: { eq: "connectBcg.jpeg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
+    prismic {
+      contactus(uid: "contact_us_slug", lang: "en-us") {
+        contact_us_title
+        contact_us_image
+        contact_us_imageSharp {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1500) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
         }
       }
     }
@@ -19,8 +25,10 @@ export const query = graphql`
 export default function contact({ data }) {
   return (
     <Layout>
-      <StyledHero img={data.contactBcg.childImageSharp.fluid} />
-      <Contact />
+      <StyledHero
+        img={data.prismic.contactus.contact_us_imageSharp.childImageSharp.fluid}
+      />
+      <Contact title={data.prismic.contactus.contact_us_title[0]} />
     </Layout>
   )
 }

@@ -2,12 +2,16 @@ import React from "react"
 import Title from "../Title"
 import styles from "../../css/contact.module.css"
 
-const Contact = () => {
+const Contact = props => {
   return (
     <section className={styles.contact}>
-      <Title title="contact" subtitle="us" />
+      <Title title={props.title.text} position="center" />
       <div className={styles.center}>
-        <form className={styles.form}>
+        <form
+          className={styles.form}
+          action="https://formspree.io/mgenaoww"
+          method="POST"
+        >
           <div>
             <label htmlFor="name">Name</label>
             <input
