@@ -1,8 +1,11 @@
 import React from "react"
 import Title from "../Title"
+import { Link } from "gatsby"
 import styles from "../../css/rent.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { AwesomeButton } from "react-awesome-button"
+import "react-awesome-button/dist/styles.css"
 
 // this is causing lazy load warnigs:
 // [Intervention] An <img> element was lazyloaded with loading=lazy,
@@ -51,6 +54,13 @@ const Rent = () => {
           {rent_text.map(element => {
             return <p>{element.text}</p>
           })}
+          <div className={styles.buttonDecorator}>
+            <AwesomeButton type="primary">
+              <Link to="../gallery" className={styles.buttonDecorator}>
+                Gallery
+              </Link>
+            </AwesomeButton>
+          </div>
         </article>
       </div>
     </section>
