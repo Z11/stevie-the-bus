@@ -62,12 +62,12 @@ module.exports = {
         accessToken: process.env.ACCESS_TOKEN,
       },
     },
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     devMode: true,
+    //   },
+    // },
     `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
   ],
