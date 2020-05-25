@@ -16,7 +16,7 @@ const useGallery = () => {
                       name
                       publicURL
                       childImageSharp {
-                        fluid(quality: 100, maxWidth: 2000) {
+                        fluid(quality: 100, maxWidth: 500) {
                           ...GatsbyImageSharpFluid_withWebp_tracedSVG
                         }
                       }
