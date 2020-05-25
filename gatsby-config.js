@@ -60,6 +60,7 @@ module.exports = {
       options: {
         repositoryName: "steviethephotobus",
         accessToken: process.env.ACCESS_TOKEN,
+        omitPrismicScript: true,
       },
     },
     // {
