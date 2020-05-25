@@ -13,7 +13,7 @@ const getEveryPackageDetail = graphql`
         every_package_detail_image
         every_package_detail_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1000) {
+            fluid(quality: 100, maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -33,7 +33,7 @@ const EveryPackageDetail = () => {
   return (
     <div>
       <hr className={styles.border} />
-      <section className={styles.everyPkg} id="aboutStevie">
+      <section className={styles.everyPkg}>
         <Title
           title={every_package_detail_title[0].text}
           position="center"
