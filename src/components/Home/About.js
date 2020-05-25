@@ -19,8 +19,8 @@ const getAbout = graphql`
         about_image
         about_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 600) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(quality: 100, maxWidth: 500) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }

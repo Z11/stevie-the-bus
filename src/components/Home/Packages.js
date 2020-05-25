@@ -14,7 +14,7 @@ const getPackages = graphql`
         package_1_imageSharp {
           childImageSharp {
             fluid(quality: 100, maxWidth: 200) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -23,7 +23,7 @@ const getPackages = graphql`
         package_2_imageSharp {
           childImageSharp {
             fluid(quality: 100, maxWidth: 200) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -32,7 +32,7 @@ const getPackages = graphql`
         package_3_imageSharp {
           childImageSharp {
             fluid(quality: 100, maxWidth: 200) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }

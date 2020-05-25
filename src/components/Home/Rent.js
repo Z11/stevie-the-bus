@@ -23,7 +23,7 @@ const getRent = graphql`
         rent_imageSharp {
           childImageSharp {
             fluid(quality: 100, maxWidth: 600) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }

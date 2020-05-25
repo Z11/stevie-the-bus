@@ -13,8 +13,8 @@ const getEveryPackageDetail = graphql`
         every_package_detail_image
         every_package_detail_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 600) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid(quality: 100, maxWidth: 500) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
