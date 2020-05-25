@@ -8,10 +8,12 @@ import Packages from "../components/Home/Packages"
 import EveryPackageDetail from "../components/Home/EveryPackageDetail"
 import Rent from "../components/Home/Rent"
 import ContactEnd from "../components/Home/ContactEnd"
+import SEO from "../components/seo"
 
 export default props => (
   <>
     <Layout>
+      <SEO title="Home" />
       <StyledHero
         home="true"
         img={
@@ -42,7 +44,7 @@ export const query = graphql`
         background_home_image
         background_home_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 2000) {
+            fluid(quality: 100, maxWidth: 1800) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
@@ -50,7 +52,7 @@ export const query = graphql`
         contact_end_image
         contact_end_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 2000) {
+            fluid(quality: 100, maxWidth: 1800) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }

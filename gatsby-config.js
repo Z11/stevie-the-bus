@@ -30,7 +30,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `stevie-the-photo-bus-website`,
-        short_name: `starter`,
+        short_name: `Stevie`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
