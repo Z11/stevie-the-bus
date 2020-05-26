@@ -12,7 +12,7 @@ const getServices = graphql`
         service_1_image
         service_1_imageSharp {
           childImageSharp {
-            fixed(width: 160) {
+            fixed(width: 75) {
               ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }
@@ -22,7 +22,7 @@ const getServices = graphql`
         service_2_image
         service_2_imageSharp {
           childImageSharp {
-            fixed(width: 160) {
+            fixed(width: 75) {
               ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }
@@ -32,7 +32,7 @@ const getServices = graphql`
         service_3_image
         service_3_imageSharp {
           childImageSharp {
-            fixed(width: 160) {
+            fixed(width: 75) {
               ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }
