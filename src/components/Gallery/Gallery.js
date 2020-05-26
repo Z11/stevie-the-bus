@@ -4,23 +4,10 @@ import { Lightbox } from "react-modal-image"
 import useGallery from "./useGallery"
 import Grid from "./Grid"
 import Tile from "./Tile"
-
-const imgStyles = {
-  css: {
-    position: "absolute",
-    left: 0,
-    top: 0,
-    width: "100%",
-    height: "100%",
-    transition: "transform 0.5s, filter 0.25s",
-    "&:hover": {
-      transform: "scale(1.1)",
-      filter: "saturate(1.3)",
-    },
-  },
-}
+import styles from "../../css/galleryImages.module.css"
 
 const Gallery = () => {
+  console.log(styles)
   const images = useGallery()
   const [showImageIndex, setShowImageIndex] = useState()
   const toggleTile = index => {
@@ -37,11 +24,14 @@ const Gallery = () => {
               toggleTile(index)
             }}
           >
-            <Img alt={image.name} fluid={image.fluid} {...imgStyles} />
+            <Img
+              alt={image.name}
+              fluid={image.fluid}
+              className={styles.imgHover}
+            />
           </Tile>
         ))}
       </Grid>
-      {console.log("showImageIndex: ", showImageIndex)}
       {showImageIndex !== undefined && (
         <Lightbox
           hideDownload={true}
