@@ -1,9 +1,8 @@
 import React from "react"
 import Title from "../Title"
 import styles from "../../css/contactEnd.module.css"
+import btnStyle from "../../scss/awesomeButton.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
-import { AwesomeButton } from "react-awesome-button"
-import "react-awesome-button/dist/styles.css"
 import { Link } from "gatsby"
 
 const getContactEnd = graphql`
@@ -34,11 +33,9 @@ const ContactEnd = () => {
           </article>
         </div>
         <div className={styles.contactEndCenter}>
-          <AwesomeButton type="primary">
-            <Link to="../contact" className={styles.buttonDecorator}>
-              Contact
-            </Link>
-          </AwesomeButton>
+          <Link to={"/../contact"}>
+            <button className={btnStyle.learn}>Contact</button>
+          </Link>
         </div>
       </section>
     </div>

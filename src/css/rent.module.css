@@ -33,8 +33,6 @@
   background-color: var(--mainBlue);
 }
 .buttonDecorator {
-  text-decoration: none;
-  color: var(--mainWhite);
   padding: 3rem;
   text-align: center;
 }
