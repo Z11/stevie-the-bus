@@ -50,11 +50,11 @@ const Rent = () => {
         <article className={styles.rentInfo}>
           <Title title={rent_title[0].text} position="left"></Title>
           <hr className={styles.border} />
-          {rent_text.map(element => {
-            return <p>{element.text}</p>
+          {rent_text.map((element, index) => {
+            return <p key={index}>{element.text}</p>
           })}
           <div className={styles.buttonDecorator}>
-            <Link to="../gallery">
+            <Link to="/../gallery">
               <button className={btnStyle.learn}>Gallery</button>
             </Link>
           </div>

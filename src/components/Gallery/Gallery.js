@@ -7,7 +7,6 @@ import Tile from "./Tile"
 import styles from "../../css/galleryImages.module.css"
 
 const Gallery = () => {
-  console.log(styles)
   const images = useGallery()
   const [showImageIndex, setShowImageIndex] = useState()
   const toggleTile = index => {

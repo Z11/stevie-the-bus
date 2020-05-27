@@ -48,8 +48,8 @@ const EveryPackageDetail = () => {
             </div>
           </article>
           <article className={styles.everyPkgInfo}>
-            {every_package_detail_text.map(element => {
-              return <p>{element.text}</p>
+            {every_package_detail_text.map((element, index) => {
+              return <p key={index}>{element.text}</p>
             })}
           </article>
         </div>

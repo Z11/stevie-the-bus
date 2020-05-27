@@ -27,8 +27,8 @@ const ContactEnd = () => {
         <Title title={contact_end_title[0].text} position="center"></Title>
         <div className={styles.contactEndCenter}>
           <article className={styles.contactEndInfo}>
-            {contact_end_text.map(element => {
-              return <p>{element.text}</p>
+            {contact_end_text.map((element, index) => {
+              return <p key={index}>{element.text}</p>
             })}
           </article>
         </div>

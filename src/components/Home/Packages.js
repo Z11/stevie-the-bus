@@ -66,8 +66,8 @@ const Packages = () => {
           </span>
           <div className={styles.serviceBorderText}>
             <div className={styles.serviceText}>
-              {package_1_text.map(element => {
-                return <p>{element.text}</p>
+              {package_1_text.map((element, index) => {
+                return <p key={index}>{element.text}</p>
               })}
             </div>
           </div>
@@ -81,8 +81,8 @@ const Packages = () => {
           </span>
           <div className={styles.serviceBorderText}>
             <div className={styles.serviceText}>
-              {package_2_text.map(element => {
-                return <p>{element.text}</p>
+              {package_2_text.map((element, index) => {
+                return <p key={index}>{element.text}</p>
               })}
             </div>
           </div>
@@ -96,8 +96,8 @@ const Packages = () => {
           </span>
           <div className={styles.serviceBorderText}>
             <div className={styles.serviceText}>
-              {package_3_text.map(element => {
-                return <p>{element.text}</p>
+              {package_3_text.map((element, index) => {
+                return <p key={index}>{element.text}</p>
               })}
             </div>
           </div>
