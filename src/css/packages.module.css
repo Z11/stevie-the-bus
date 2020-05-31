@@ -17,7 +17,6 @@
   background: var(--primaryColor);
   padding: 0.5rem;
   display: inline-block;
-  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 .package h4 {
@@ -25,8 +24,9 @@
 }
 
 .serviceText {
-  padding: 2rem;
+  padding: 1rem;
   background: var(--mainYellow);
+  font-size: 0.85rem;
 }
 
 .serviceBorderText {
