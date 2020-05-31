@@ -54,6 +54,9 @@
   .nav-links a {
     padding: 0.75rem 1.25rem;
   }
+  .icons {
+    display: none;
+  }
   .logo-btn {
     padding: 1rem 0.75rem;
     background: transparent;
