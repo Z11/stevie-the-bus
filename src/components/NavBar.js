@@ -78,7 +78,12 @@ const NavBar = () => {
             } else if (item.type === "link") {
               return (
                 <li key={index}>
-                  <div role="button" onClick={toggleNav} onKeyDown={() => {}}>
+                  <div
+                    role="button"
+                    tabIndex={index}
+                    onClick={toggleNav}
+                    onKeyDown={() => {}}
+                  >
                     <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
                   </div>
                 </li>
@@ -86,7 +91,12 @@ const NavBar = () => {
             } else if (item.type === "page") {
               return (
                 <li key={index}>
-                  <div role="button" onClick={toggleNav} onKeyDown={() => {}}>
+                  <div
+                    role="button"
+                    tabIndex={index}
+                    onClick={toggleNav}
+                    onKeyDown={() => {}}
+                  >
                     <Link to={item.path}>{item.text}</Link>
                   </div>
                 </li>
