@@ -16,7 +16,7 @@ const useGallery = () => {
                       name
                       publicURL
                       childImageSharp {
-                        fluid(quality: 100, maxWidth: 900) {
+                        fluid(quality: 100, maxWidth: 800) {
                           ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                       }
