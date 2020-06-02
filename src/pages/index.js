@@ -44,7 +44,7 @@ export const query = graphql`
         background_home_image
         background_home_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1100) {
+            fluid(quality: 100, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
@@ -52,7 +52,7 @@ export const query = graphql`
         contact_end_image
         contact_end_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1100) {
+            fluid(quality: 100, maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
