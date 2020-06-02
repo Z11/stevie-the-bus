@@ -13,7 +13,7 @@ export const query = graphql`
         contact_us_image
         contact_us_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1300) {
+            fluid(quality: 100, maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
