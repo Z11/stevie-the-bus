@@ -80,7 +80,7 @@ const NavBar = () => {
                 <li key={index}>
                   <div
                     role="button"
-                    tabIndex={index}
+                    tabIndex={0}
                     onClick={toggleNav}
                     onKeyDown={() => {}}
                   >
@@ -93,7 +93,7 @@ const NavBar = () => {
                 <li key={index}>
                   <div
                     role="button"
-                    tabIndex={index}
+                    tabIndex={0}
                     onClick={toggleNav}
                     onKeyDown={() => {}}
                   >
