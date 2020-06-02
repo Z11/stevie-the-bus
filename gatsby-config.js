@@ -5,8 +5,18 @@ module.exports = {
     title: `Stevie The Photo Bus Website`,
     description: `Kick off your next event with Stevie.`,
     author: `Roberto Chupin`,
+    siteUrl: `https://steviethephotobus.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://steviethephotobus.netlify.app/",
+        sitemap: "https://steviethephotobus.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     // With this plugin, attributes you add in their component,
     // e.g. title, meta attributes, etc. will get added to the static HTML pages Gatsby builds.
     // This is important not just for site viewers,
