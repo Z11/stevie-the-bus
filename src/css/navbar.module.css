@@ -126,8 +126,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: fadeIn ease 1.25s;
-    -webkit-animation: fadeIn ease 1.25s;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
   }
   .desktop-logo-btn {
     background: transparent;
