@@ -30,6 +30,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svgs/,
+        },
+      },
+    },
     // Creates ImageSharp nodes from image types that are supported
     // by the Sharp image processing library and provides fields in their
     // GraphQL types for processing your images in a variety of ways

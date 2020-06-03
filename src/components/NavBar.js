@@ -1,42 +1,13 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
-
-const getBusLogo = graphql`
-  query {
-    prismic {
-      home_page(uid: "home_page_slug", lang: "en-us") {
-        stevie_logo_desktop_image
-        desktopBusLogo: stevie_logo_desktop_imageSharp {
-          childImageSharp {
-            fixed(width: 150) {
-              ...GatsbyImageSharpFixed_withWebp_noBase64
-            }
-          }
-        }
-        mobileBusLogo: stevie_logo_desktop_imageSharp {
-          childImageSharp {
-            fixed(width: 90) {
-              ...GatsbyImageSharpFixed_withWebp_noBase64
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import IconStevie from "../svgs/stevie-logo.svg"
 
 const NavBar = () => {
-  const { desktopBusLogo, mobileBusLogo } = useStaticQuery(
-    getBusLogo
-  ).prismic.home_page
-
   const [isOpen, setNav] = useState(false)
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
@@ -46,13 +17,14 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <Link to={links[2].path} className={styles.logoBtn}>
-            <Img
-              fixed={mobileBusLogo.childImageSharp.fixed}
-              alt="mobile bus logo"
-            />
+          <Link to={links[2].path} className={styles.mobileLogoBtn}>
+            <IconStevie />
           </Link>
-          <button type="button" className={styles.logoBtn} onClick={toggleNav}>
+          <button
+            type="button"
+            className={styles.logoSelector}
+            onClick={toggleNav}
+          >
             <FaAlignRight className={styles.logoIcon} />
           </button>
         </div>
@@ -66,12 +38,9 @@ const NavBar = () => {
           {links.map((item, index) => {
             if (item.type === "img") {
               return (
-                <li key={index} className={styles.mainLogoBtn}>
+                <li key={index} className={styles.desktopLogoBtn}>
                   <Link to={item.path}>
-                    <Img
-                      fixed={desktopBusLogo.childImageSharp.fixed}
-                      alt="desktop bus logo"
-                    />
+                    <IconStevie />
                   </Link>
                 </li>
               )
