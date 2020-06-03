@@ -76,8 +76,7 @@
   .mobile-logo-btn {
     padding: 0.5rem 0.4rem;
     background: transparent;
-    width: 24%;
-    height: 24%;
+    width: 110px;
     position: center;
   }
 }
@@ -133,10 +132,7 @@
     background: transparent;
     border: none;
     outline: none;
-    top: 0;
-    left: 0;
-    width: 15%;
-    height: 15%;
+    width: 200px;
     object-fit: cover;
     object-position: center;
   }
