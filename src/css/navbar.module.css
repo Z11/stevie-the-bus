@@ -57,18 +57,16 @@
   .icons {
     display: none;
   }
-  .logo-selector {
+  .logoAlignRight {
+    fill: var(--mainBlue);
+    font-size: 1.5rem;
     padding: 1rem 0.75rem;
     background: transparent;
     border: none;
     outline: none;
   }
-  .logo-selector:hover {
-    cursor: pointer;
-  }
-  .logo-icon {
-    color: var(--primaryColor);
-    font-size: 1.5rem;
+  .logoAlignRight svg:hover {
+    fill: var(--mainYellow);
   }
   .desktop-logo-btn {
     display: none;
@@ -110,13 +108,13 @@
   .icons a {
     display: block;
     margin: 1rem 0.25rem;
-    color: var(--mainBlue);
+    fill: var(--mainBlue);
     transition: var(--mainTransition);
   }
   .icons a:hover {
-    color: var(--mainYellow);
+    fill: var(--mainYellow);
   }
-  .logo-selector {
+  .logoAlignRight {
     display: none;
   }
   .nav-center {

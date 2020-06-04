@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import styles from "../css/navbar.module.css"
-import { FaAlignRight } from "react-icons/fa"
+import AlignRight from "../svgs/alignRight.svg"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
 import IconStevie from "../svgs/stevie-logo.svg"
@@ -22,10 +22,10 @@ const NavBar = () => {
           </Link>
           <button
             type="button"
-            className={styles.logoSelector}
+            className={styles.logoAlignRight}
             onClick={toggleNav}
           >
-            <FaAlignRight className={styles.logoIcon} />
+            <AlignRight />
           </button>
         </div>
         <ul

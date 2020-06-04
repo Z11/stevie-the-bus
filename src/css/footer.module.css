@@ -22,11 +22,11 @@
   display: inline-block;
   margin: 1rem;
   font-size: 1.3rem;
-  color: var(--mainWhite);
+  fill: var(--mainWhite);
   transition: var(--mainTransition);
 }
 .icons a:hover {
-  color: var(--primaryColor);
+  fill: var(--primaryColor);
 }
 .copyright {
   text-transform: capitalize;

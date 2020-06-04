@@ -1,15 +1,16 @@
 import React from "react"
 
-import { FaFacebook, FaInstagram } from "react-icons/fa"
+import FaFacebook from "../svgs/facebook.svg"
+import FaInstagram from "../svgs/instagram.svg"
 
 export default [
   {
-    icon: <FaInstagram size={25} />,
+    icon: <FaInstagram />,
     name: "InstagramIcon",
     url: "https://www.instagram.com/steviethebus/",
   },
   {
-    icon: <FaFacebook size={25} />,
+    icon: <FaFacebook />,
     name: "FacebookIcon",
     url: "https://www.facebook.com/Stevie-The-Bus-105642537655254/",
   },
