@@ -27,6 +27,8 @@
   padding: 1rem;
   background: var(--mainYellow);
   font-size: 0.85rem;
+  border: 20px;
+  border-radius: 20px;
 }
 
 .serviceBorderText {
