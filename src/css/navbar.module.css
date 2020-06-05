@@ -65,9 +65,6 @@
     border: none;
     outline: none;
   }
-  .logoAlignRight svg:hover {
-    fill: var(--mainYellow);
-  }
   .desktop-logo-btn {
     display: none;
   }
@@ -76,6 +73,12 @@
     background: transparent;
     width: 110px;
     position: center;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .logoAlignRight svg:hover {
+      fill: var(--mainYellow);
+    }
   }
 }
 
