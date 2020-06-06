@@ -25,11 +25,11 @@ export default styled(StyledHero)`
   justify-content: center;
   align-items: center;
   /* mobile */
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     min-height: ${"50vh"};
   }
   /* desktop */
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     min-height: ${props => (props.home ? "calc(95vh - 60px)" : "50vh")};
   }
 `
