@@ -12,7 +12,7 @@
 }
 .nav-links a {
   display: block;
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.25rem;
   text-decoration: none;
   text-transform: capitalize;
   color: var(--mainBlack);
@@ -85,7 +85,7 @@
 /*This For Desktop*/
 @media screen and (min-width: 800px) {
   .nav-header {
-    height: 117px;
+    height: 100px;
   }
   .nav-links {
     top: 0;
@@ -133,12 +133,15 @@
     background: transparent;
     border: none;
     outline: none;
-    width: 195px;
+    width: 170px;
     object-fit: cover;
     object-position: center;
   }
   .desktop-logo-btn:hover {
     cursor: pointer;
+  }
+  .mobile-logo-btn {
+    display: none;
   }
 }
 

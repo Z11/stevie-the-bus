@@ -13,7 +13,7 @@ import SEO from "../components/seo"
 export default props => (
   <>
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Stevie" />
       <StyledHero
         home="true"
         img={

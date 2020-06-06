@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 const useGallery = () => {
-  // TODO: Make "content/gallery" dynamic somehow..
   const data = useStaticQuery(graphql`
     {
       prismic {
@@ -16,7 +15,7 @@ const useGallery = () => {
                       name
                       publicURL
                       childImageSharp {
-                        fluid(quality: 100, maxWidth: 800) {
+                        fluid(quality: 100, maxHeight: 1000, maxWidth: 800) {
                           ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                       }
