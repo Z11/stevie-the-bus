@@ -28,6 +28,7 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const { twitterUsername, siteUrl, image } = site.siteMetadata
 
   return (
     <Helmet
@@ -67,7 +68,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.twitterUsername,
+          content: twitterUsername,
         },
         {
           name: `twitter:image`,
