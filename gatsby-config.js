@@ -5,7 +5,7 @@ module.exports = {
     title: `Stevie The Photo Bus Website`,
     description: `Kick off your next event with Stevie.`,
     twitterUsername: `@OhSnapItsRobe`,
-    image: `${__dirname}/src/svgs/stevie-logo.svg`,
+    image: `/stevie-logo.svg`,
     siteUrl: `https://steviethephotobus.netlify.app/`,
   },
   plugins: [
