@@ -12,6 +12,7 @@ const useGallery = () => {
                   fields {
                     image
                     imageSharp {
+                      id
                       name
                       publicURL
                       childImageSharp {
@@ -29,10 +30,10 @@ const useGallery = () => {
       }
     }
   `)
-  let i = 0
+
   return data.prismic.allGallerys.edges[0].node.body[0].fields.map(node => ({
-    id: i++,
     ...node.imageSharp.childImageSharp,
+    id: node.imageSharp.id,
     name: node.imageSharp.name,
     publicURL: node.imageSharp.publicURL,
   }))
