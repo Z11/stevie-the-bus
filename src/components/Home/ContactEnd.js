@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "../Title"
 import styles from "../../css/contactEnd.module.css"
-import btnStyle from "../../scss/awesomeButton.module.scss"
+import btnStyle from "../../css/awesomeButton.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 

@@ -92,7 +92,6 @@ module.exports = {
         disable: true,
       },
     },
-    `gatsby-plugin-sass`,
     `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
   ],

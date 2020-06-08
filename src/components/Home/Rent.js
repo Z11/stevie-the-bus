@@ -2,7 +2,7 @@ import React from "react"
 import Title from "../Title"
 import { Link } from "gatsby"
 import styles from "../../css/rent.module.css"
-import btnStyle from "../../scss/awesomeButton.module.scss"
+import btnStyle from "../../css/awesomeButton.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
