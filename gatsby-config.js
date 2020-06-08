@@ -6,15 +6,15 @@ module.exports = {
     description: `Kick off your next event with Stevie.`,
     twitterUsername: `@OhSnapItsRobe`,
     image: `/stevie-logo-twitter-card.png`,
-    siteUrl: `https://steviethephotobus.netlify.app/`,
+    siteUrl: `https://www.steviethephotobus.com/`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://steviethephotobus.netlify.app/",
-        sitemap: "https://steviethephotobus.netlify.app/sitemap.xml",
+        host: "https://www.steviethephotobus.com/",
+        sitemap: "https://www.steviethephotobus.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
