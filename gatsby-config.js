@@ -18,6 +18,12 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.steviethephotobus.com/`,
+      },
+    },
     // With this plugin (gatsby-plugin-react-helmet), attributes you add in their component,
     // e.g. title, meta attributes, etc. will get added to the static HTML pages Gatsby builds.
     // This is important not just for site viewers,
