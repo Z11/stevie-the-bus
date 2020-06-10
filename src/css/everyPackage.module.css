@@ -8,14 +8,9 @@
 .everyPkg-img {
   margin: 3rem 0;
 }
-/*Adds padding to top of content*/
-/* .everyPkg-info { 
-    margin-top: 3rem;
-  } */
 .everyPkg-img {
   position: relative;
 }
-
 .everyPkg-img img {
   width: 100%;
   display: block;
@@ -42,9 +37,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
-    /* align-items controls position of articles. Now set to sealing of article */
-    /* align-items: center; */
-    /* margin-top: 3rem; */
   }
 
   .everyPkg-img,

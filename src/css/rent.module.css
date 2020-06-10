@@ -7,22 +7,11 @@
 }
 .rent-img {
   margin: 3rem 0;
-}
-/*Adds padding to top of content*/
-/* .rent-info { 
-    margin-top: 3rem;
-  } */
-.rent-img {
   position: relative;
 }
-
 .rent-img img {
   width: 100%;
   display: block;
-  box-shadow: var(--mainBlue);
-}
-.rent-img div {
-  box-shadow: var(--mainBlue);
 }
 .border {
   border: 5px var(--mainBlue);
@@ -42,9 +31,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
-    /* align-items controls position of articles. Now set to sealing of article */
-    /* align-items: center; */
-    /* margin-top: 3rem; */
   }
 
   .rent-img,
@@ -52,10 +38,10 @@
     margin: 0;
   }
   .rent-img img {
-    max-height: 500px;
+    max-height: 600px;
   }
   .img-container {
-    max-height: 500px;
+    max-height: 600px;
   }
   .rent-info p {
     width: 80%;
