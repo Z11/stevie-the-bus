@@ -100,5 +100,6 @@ module.exports = {
     },
     `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-offline`,
   ],
 }
