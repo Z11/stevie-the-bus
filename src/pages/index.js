@@ -14,50 +14,50 @@ export default props => (
   <>
     <Layout>
       <SEO title="Stevie" />
-      {/* <StyledHero
+      <StyledHero
         home="true"
         img={
           props.data.prismic.home_page.background_home_imageSharp
             .childImageSharp.fluid
         }
-      ></StyledHero> */}
+      ></StyledHero>
       <About />
       <Services />
       <Packages />
       <EveryPackageDetail />
       <Rent />
-      {/* <StyledHero
+      <StyledHero
         img={
           props.data.prismic.home_page.contact_end_imageSharp.childImageSharp
             .fluid
         }
-      ></StyledHero> */}
+      ></StyledHero>
       <ContactEnd />
     </Layout>
   </>
 )
 
-// export const query = graphql`
-//   query {
-//     prismic {
-//       home_page(uid: "home_page_slug", lang: "en-us") {
-//         background_home_image
-//         background_home_imageSharp {
-//           childImageSharp {
-//             fluid(quality: 100, maxWidth: 1200) {
-//               ...GatsbyImageSharpFluid_withWebp_noBase64
-//             }
-//           }
-//         }
-//         contact_end_image
-//         contact_end_imageSharp {
-//           childImageSharp {
-//             fluid(quality: 100, maxWidth: 1200) {
-//               ...GatsbyImageSharpFluid_withWebp_noBase64
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    prismic {
+      home_page(uid: "home_page_slug", lang: "en-us") {
+        background_home_image
+        background_home_imageSharp {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+        contact_end_image
+        contact_end_imageSharp {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    }
+  }
+`
