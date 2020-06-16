@@ -64,6 +64,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/svgs/stevie-bus.svg`, // This path is relative to the root of the site.
+        cache_busting_mode: "none",
       },
     },
     {
@@ -100,6 +101,14 @@ module.exports = {
     },
     `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/*"],
+          maximumFileSizeToCacheInBytes: 11000000,
+        },
+      },
+    },
   ],
 }
