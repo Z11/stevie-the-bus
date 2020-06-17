@@ -101,13 +101,6 @@ module.exports = {
     },
     `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
-    {
-      resolve: "gatsby-plugin-offline",
-      options: {
-        workboxConfig: {
-          globPatterns: ["**/*"],
-        },
-      },
-    },
+    `gatsby-plugin-offline`,
   ],
 }

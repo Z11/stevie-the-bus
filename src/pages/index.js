@@ -23,8 +23,8 @@ export default props => (
       ></StyledHero>
       <About />
       <Services />
-      <Packages />
-      <EveryPackageDetail />
+      {/* <Packages />
+      <EveryPackageDetail /> */}
       <Rent />
       <StyledHero
         img={
