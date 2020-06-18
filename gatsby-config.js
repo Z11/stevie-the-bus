@@ -92,14 +92,15 @@ module.exports = {
         omitPrismicScript: true,
       },
     },
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-        disable: true,
-      },
-    },
-    `gatsby-plugin-playground`, ///___playground
+    // INSTALL IF NECESSARY TO CHECK BUNDLE SIZE
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     devMode: true,
+    //     disable: true,
+    //   },
+    // },
+    // `gatsby-plugin-playground`, ///___playground
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
   ],
