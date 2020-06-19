@@ -40,7 +40,7 @@ const NavBar = () => {
               return (
                 <li key={index} className={styles.desktopLogoBtn}>
                   <Link to={item.path}>
-                    <IconStevie />
+                    <IconStevie aria-label="Home Page" />
                   </Link>
                 </li>
               )
