@@ -24,22 +24,7 @@ module.exports = {
         siteUrl: `https://www.steviethephotobus.com/`,
       },
     },
-    // With this plugin (gatsby-plugin-react-helmet), attributes you add in their component,
-    // e.g. title, meta attributes, etc. will get added to the static HTML pages Gatsby builds.
-    // This is important not just for site viewers,
-    // but also for SEO — title and description metadata stored in the document head is a
-    // key component used by Google in determining placement in search results.
     `gatsby-plugin-react-helmet`,
-    // The Gallery needs (gatsby-source-filesystem) plugin to access the publicURL for
-    // the images to be viewed full-screen when clicked in the gallery page.
-    // This is just a place holder so it can used by the  Gallery later.
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images`,
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -48,10 +33,6 @@ module.exports = {
         },
       },
     },
-    // Creates ImageSharp nodes from image types that are supported
-    // by the Sharp image processing library and provides fields in their
-    // GraphQL types for processing your images in a variety of ways
-    // including resizing, cropping, and creating responsive images.
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -63,7 +44,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/svgs/stevie-bus.svg`, // This path is relative to the root of the site.
+        icon: `src/svgs/stevie-bus.svg`,
         cache_busting_mode: "none",
       },
     },
