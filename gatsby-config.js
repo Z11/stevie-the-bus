@@ -33,13 +33,13 @@ module.exports = {
     // The Gallery needs (gatsby-source-filesystem) plugin to access the publicURL for
     // the images to be viewed full-screen when clicked in the gallery page.
     // This is just a place holder so it can used by the  Gallery later.
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

@@ -14,9 +14,9 @@ const useGallery = () => {
                     imageSharp {
                       id
                       name
-                      publicURL
                       childImageSharp {
                         fluid(quality: 90) {
+                          src
                           ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                       }
@@ -35,7 +35,7 @@ const useGallery = () => {
     ...node.imageSharp.childImageSharp,
     id: node.imageSharp.id,
     name: node.imageSharp.name,
-    publicURL: node.imageSharp.publicURL,
+    publicURL: node.imageSharp.childImageSharp.fluid.src,
   }))
 }
 
