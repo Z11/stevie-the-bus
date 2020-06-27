@@ -25,8 +25,8 @@ body {
   font-weight: 300;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  line-height: 1.4;
-  font-size: 1.1rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
 }
 h1,
 h2,
@@ -36,7 +36,6 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
 p {

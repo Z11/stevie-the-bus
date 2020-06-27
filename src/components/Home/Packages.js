@@ -9,7 +9,6 @@ const getPackages = graphql`
     prismic {
       home_page(uid: "home_page_slug", lang: "en-us") {
         packages_main_title
-        packages_main_title
         package_1_image
         package_1_imageSharp {
           childImageSharp {
@@ -18,6 +17,7 @@ const getPackages = graphql`
             }
           }
         }
+        package_1_title
         package_1_text
         package_2_image
         package_2_imageSharp {
@@ -27,6 +27,7 @@ const getPackages = graphql`
             }
           }
         }
+        package_2_title
         package_2_text
         package_3_image
         package_3_imageSharp {
@@ -36,6 +37,7 @@ const getPackages = graphql`
             }
           }
         }
+        package_3_title
         package_3_text
       }
     }
@@ -46,10 +48,13 @@ const Packages = () => {
   const {
     packages_main_title,
     package_1_imageSharp,
+    package_1_title,
     package_1_text,
     package_2_imageSharp,
+    package_2_title,
     package_2_text,
     package_3_imageSharp,
+    package_3_title,
     package_3_text,
   } = useStaticQuery(getPackages).prismic.home_page
 

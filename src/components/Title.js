@@ -13,7 +13,6 @@ const Title = ({ title, subtitle, className }) => {
 }
 
 export default styled(Title)`
-  margin-bottom: 2rem;
   h4 {
     font-size: 2.3rem;
     text-align: ${props => (props.position ? props.position : "left")};
@@ -29,7 +28,6 @@ export default styled(Title)`
   @media (min-width: 576px) {
     span {
       display: inline-block;
-      margin: 0 0.35rem;
     }
   }
 `

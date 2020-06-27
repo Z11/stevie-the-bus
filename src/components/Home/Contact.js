@@ -5,7 +5,7 @@ import styles from "../../css/contact.module.css"
 const Contact = props => {
   return (
     <section className={styles.contact}>
-      <Title title={props.title.text} position="center" />
+      <Title title={"Get In Touch"} position="center" />
       <div className={styles.center}>
         <form
           className={styles.form}
