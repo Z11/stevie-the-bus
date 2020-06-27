@@ -43,7 +43,7 @@ const Services = () => {
   } = useStaticQuery(getServices).prismic.home_page
 
   return (
-    <section className={styles.services} id="servicesStevie">
+    <section className={styles.services}>
       <div className={styles.serviceCenter}>
         <article key={1}>
           <Img
