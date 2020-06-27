@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://www.steviethephotobus.com/`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
