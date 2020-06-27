@@ -16,7 +16,7 @@ export default styled(Title)`
   h4 {
     font-size: 2.3rem;
     text-align: ${props => (props.position ? props.position : "left")};
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: var(--primaryColor);
   }
   .title {
