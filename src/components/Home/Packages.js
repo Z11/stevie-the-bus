@@ -39,6 +39,7 @@ const getPackages = graphql`
         }
         package_3_title
         package_3_text
+        options_text
       }
     }
   }
@@ -56,57 +57,58 @@ const Packages = () => {
     package_3_imageSharp,
     package_3_title,
     package_3_text,
+    options_text,
   } = useStaticQuery(getPackages).prismic.home_page
 
   return (
     <section className={styles.packages}>
       <Title title={packages_main_title[0].text} position="center" />
       <div className={styles.center}>
-        <article key={1} className={styles.service}>
-          <span>
-            <Img
-              fluid={package_1_imageSharp.childImageSharp.fluid}
-              alt="srvImage1"
-            />
-          </span>
-          <div className={styles.serviceBorderText}>
-            <div className={styles.serviceText}>
-              {package_1_text.map((element, index) => {
-                return <p key={index}>{element.text}</p>
-              })}
-            </div>
+        <article key={1}>
+          <Img
+            fluid={package_1_imageSharp.childImageSharp.fluid}
+            alt="srvImage1"
+          />
+          <div className={styles.packageTitle}>
+            <p>{package_1_title[0].text}</p>
+          </div>
+          <div className={styles.packageDescription}>
+            {package_1_text.map((element, index) => {
+              return <p key={index}>{element.text}</p>
+            })}
           </div>
         </article>
-        <article key={2} className={styles.service}>
-          <span>
-            <Img
-              fluid={package_2_imageSharp.childImageSharp.fluid}
-              alt="srvImage2"
-            />
-          </span>
-          <div className={styles.serviceBorderText}>
-            <div className={styles.serviceText}>
-              {package_2_text.map((element, index) => {
-                return <p key={index}>{element.text}</p>
-              })}
-            </div>
+        <article key={2}>
+          <Img
+            fluid={package_2_imageSharp.childImageSharp.fluid}
+            alt="srvImage2"
+          />
+          <div className={styles.packageTitle}>
+            <p>{package_2_title[0].text}</p>
+          </div>
+          <div className={styles.packageDescription}>
+            {package_2_text.map((element, index) => {
+              return <p key={index}>{element.text}</p>
+            })}
           </div>
         </article>
-        <article key={3} className={styles.service}>
-          <span>
-            <Img
-              fluid={package_3_imageSharp.childImageSharp.fluid}
-              alt="srvImage3"
-            />
-          </span>
-          <div className={styles.serviceBorderText}>
-            <div className={styles.serviceText}>
-              {package_3_text.map((element, index) => {
-                return <p key={index}>{element.text}</p>
-              })}
-            </div>
+        <article key={3}>
+          <Img
+            fluid={package_3_imageSharp.childImageSharp.fluid}
+            alt="srvImage3"
+          />
+          <div className={styles.packageTitle}>
+            <p>{package_3_title[0].text}</p>
+          </div>
+          <div className={styles.packageDescription}>
+            {package_3_text.map((element, index) => {
+              return <p key={index}>{element.text}</p>
+            })}
           </div>
         </article>
+      </div>
+      <div className={styles.packageOptionsDescription}>
+        <p>{options_text[0].text}</p>
       </div>
     </section>
   )

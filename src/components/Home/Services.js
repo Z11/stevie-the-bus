@@ -1,5 +1,4 @@
 import React from "react"
-import Title from "../Title"
 import styles from "../../css/services.module.css"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"

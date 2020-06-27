@@ -13,23 +13,23 @@
   margin: 2rem 0;
   text-align: center;
 }
-.package span {
-  background: var(--primaryColor);
-  padding: 0.5rem;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-.package h4 {
-  text-transform: uppercase;
+
+.package-title {
+  text-align: center;
+  margin: 1.2rem;
+  font-size: 1.5rem;
 }
 
-.serviceText {
-  padding: 1rem;
-  font-size: 0.85rem;
+.package-description {
+  font-size: 1rem;
   border: 20px;
   border-radius: 20px;
 }
 
-.serviceBorderText {
-  padding: 0rem 1rem;
+.package-options-description {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 20px;
+  border-radius: 20px;
 }
