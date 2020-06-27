@@ -15,27 +15,109 @@ const Contact = () => {
             method="POST"
           >
             <div>
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className={styles.formControl}
-                placeholder="name"
-              />
+              <section className={styles.contactName}>
+                <article>
+                  <label htmlFor="first name">First Name</label>
+                  <input
+                    type="text"
+                    name="first name"
+                    id="first name"
+                    className={styles.formControl}
+                    placeholder="first name"
+                  />
+                </article>
+                <article>
+                  <label htmlFor="last name">Last Name</label>
+                  <input
+                    type="text"
+                    name="last name"
+                    id="last name"
+                    className={styles.formControl}
+                    placeholder="last name"
+                  />
+                </article>
+              </section>
             </div>
             <div>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email Address</label>
               <input
-                type="email"
+                type="text"
                 name="email"
                 id="email"
                 className={styles.formControl}
                 placeholder="email"
+                required
               />
             </div>
             <div>
-              <label htmlFor="message">Message</label>
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                className={styles.formControl}
+                placeholder="phone"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="date">Date of Event</label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                className={styles.formControl}
+                placeholder="date"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="location">Location of Event</label>
+              <input
+                type="location"
+                name="location"
+                id="location"
+                className={styles.formControl}
+                placeholder="location"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="package">
+                Which package are you interested in ?
+              </label>
+              <br />
+              <input type="radio" id="dreams" name="package" value="dreams" />
+              <label htmlFor="dreams"> Dreams</label>
+              <br />
+              <input
+                type="radio"
+                id="everywhere"
+                name="package"
+                value="everywhere"
+              />
+              <label htmlFor="everywhere"> Everywhere</label>
+              <br />
+              <input
+                type="radio"
+                id="dontStop"
+                name="package"
+                value="dontStop"
+              />
+              <label htmlFor="dontStop"> Don't Stop</label>
+              <br />
+              <input
+                type="radio"
+                id="photoVideoShoot"
+                name="package"
+                value="photoVideoShoot"
+              />
+              <label htmlFor="photoVideoShoot"> Photo / Shoot Video</label>
+              <br />
+              <br />
+            </div>
+            <div>
+              <label htmlFor="message">Event or Photo Shoot Description</label>
               <textarea
                 name="message"
                 id="message"

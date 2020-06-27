@@ -5,6 +5,13 @@
   width: 80vw;
   margin: 0 auto;
 }
+
+.contact-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+}
+
 @media screen and (min-width: 992px) {
   .center {
     width: 50vw;
