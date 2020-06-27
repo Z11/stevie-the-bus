@@ -4,10 +4,8 @@ import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
-// import Packages from "../components/Home/Packages"
-// import EveryPackageDetail from "../components/Home/EveryPackageDetail"
-import Rent from "../components/Home/Rent"
-import ContactEnd from "../components/Home/ContactEnd"
+import Packages from "../components/Home/Packages"
+import Contact from "../components/Home/Contact"
 import SEO from "../components/seo"
 
 export default props => (
@@ -23,16 +21,14 @@ export default props => (
       ></StyledHero>
       <About />
       <Services />
-      {/* <Packages />
-      <EveryPackageDetail /> */}
-      <Rent />
       <StyledHero
         img={
           props.data.prismic.home_page.contact_end_imageSharp.childImageSharp
             .fluid
         }
       ></StyledHero>
-      <ContactEnd />
+      <Packages />
+      <Contact />
     </Layout>
   </>
 )
