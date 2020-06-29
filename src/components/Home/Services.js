@@ -12,7 +12,7 @@ const getServices = graphql`
         service_1_image
         service_1_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 500) {
+            fluid(quality: 100, maxWidth: 500, maxHeight: 370) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
@@ -22,7 +22,7 @@ const getServices = graphql`
         service_2_image
         service_2_imageSharp {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 500) {
+            fluid(quality: 100, maxWidth: 500, maxHeight: 370) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
