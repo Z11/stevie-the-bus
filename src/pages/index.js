@@ -11,7 +11,7 @@ import SEO from "../components/seo"
 export default props => (
   <>
     <Layout>
-      <SEO title="Stevie" />
+      <SEO title="HTX - Welcome to our VW Photo Booth" />
       <StyledHero
         home="true"
         img={
