@@ -26,7 +26,7 @@
     padding: 1rem 0;
   }
   .package-title {
-    margin: 1rem;
+    margin: 0.5rem;
     font-size: 1.65rem;
   }
   .package-description {
@@ -37,7 +37,6 @@
   .package-options-description {
     margin-top: 4rem;
     text-align: center;
-    font-size: 1rem;
     border: 20px;
     border-radius: 20px;
   }
