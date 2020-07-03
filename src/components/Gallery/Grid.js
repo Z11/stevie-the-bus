@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Grid = styled.div`
-  padding: 1rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-auto-rows: 16rem;
