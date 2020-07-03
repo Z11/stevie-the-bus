@@ -1,12 +1,8 @@
-.about {
-  padding: 4rem 0;
-}
 .about-center {
   width: 80vw;
   margin: 0 auto;
 }
 .about-img {
-  margin: 3rem 0;
   position: relative;
 }
 .about-img img {
@@ -20,11 +16,37 @@
 .border {
   border: 5px var(--mainBlue);
   border-radius: 5px;
-  margin-top: 1.1rem;
-  margin-bottom: 2.3rem;
-  height: 6px;
   width: 100%;
   background-color: var(--mainBlue);
+  height: 6px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 1rem 0;
+  }
+  .about-img {
+    margin: 1rem 0;
+  }
+  .border {
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 600px) {
+  .about {
+    padding: 4rem 0;
+  }
+  .about-img {
+    margin: 3rem 0;
+  }
+  .border {
+    margin-top: 1.1rem;
+    margin-bottom: 2.3rem;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -22,9 +22,9 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  color: var(--mainBlack);
+  color: var(--primaryColor);
   background: var(--mainWhite);
+  font-weight: 300;
   line-height: 1.7;
   font-size: 1.2rem;
 }
@@ -38,40 +38,29 @@ h6 {
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
-p {
-  margin-bottom: 1.25rem;
-}
-.btn-white,
-.btn-primary {
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainWhite);
-  border: 2px solid var(--mainWhite);
-  padding: 0.9rem 1.6rem;
-  display: inline-block;
-  transition: var(--mainTransition);
-  cursor: pointer;
-}
-.btn-white:hover {
-  background: var(--mainWhite);
-  color: var(--primaryColor);
-}
-.btn-primary {
-  background: var(--primaryColor);
-  color: var(--mainWhite);
-  border: 2px solid var(--primaryColor);
-}
-.btn-primary:hover {
-  background: transparent;
-  color: var(--primaryColor);
-}
 main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* .gatsby-image-wrapper {
-  max-height: 600px;
-} */
+@media screen and (max-width: 600px) {
+  body {
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 0.8rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1.2rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+  }
+}
