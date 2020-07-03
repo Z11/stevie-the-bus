@@ -20,7 +20,6 @@
   letter-spacing: var(--mainSpacing);
   border: none;
   outline: none;
-  font-size: 1rem;
 }
 .nav-links a:hover {
   color: var(--primaryColor);
@@ -53,6 +52,7 @@
     text-align: center;
   }
   .nav-links a {
+    font-size: 1rem;
     padding: 0.5rem 1.25rem;
   }
   .icons {
