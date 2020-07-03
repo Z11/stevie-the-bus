@@ -14,9 +14,6 @@ const Title = ({ title, subtitle, className }) => {
 
 export default styled(Title)`
   h4 {
-    font-size: 2.6rem;
-    text-align: ${props => (props.position ? props.position : "left")};
-    letter-spacing: 1px;
     color: var(--primaryColor);
   }
   .title {
@@ -28,6 +25,24 @@ export default styled(Title)`
   @media (min-width: 576px) {
     span {
       display: inline-block;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    h4 {
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 600px) {
+    h4 {
+      font-size: 2.6rem;
+      text-align: ${props => (props.position ? props.position : "left")};
+      letter-spacing: 1px;
     }
   }
 `
