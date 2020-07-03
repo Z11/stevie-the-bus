@@ -1,5 +1,5 @@
 .services {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 .service-center {
   width: 80vw;
@@ -17,7 +17,9 @@
 }
 .service-title {
   text-align: center;
-  margin: 1.2rem;
+  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   font-size: 2.6rem;
 }
 .service-description {

@@ -14,7 +14,7 @@ const Title = ({ title, subtitle, className }) => {
 
 export default styled(Title)`
   h4 {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     text-align: ${props => (props.position ? props.position : "left")};
     letter-spacing: 1px;
     color: var(--primaryColor);
