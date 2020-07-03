@@ -20,6 +20,7 @@
   letter-spacing: var(--mainSpacing);
   border: none;
   outline: none;
+  font-size: 1rem;
 }
 .nav-links a:hover {
   color: var(--primaryColor);
@@ -29,7 +30,7 @@
 @media screen and (max-width: 800px) {
   /* shows ancherlinks and pagelinks*/
   .show-nav {
-    height: 200px;
+    height: 170px;
   }
   .nav-header {
     position: fixed;
