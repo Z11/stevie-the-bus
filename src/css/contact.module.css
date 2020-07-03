@@ -1,5 +1,8 @@
 .contact {
-  padding: 4rem 0;
+  padding: 3rem 0;
+}
+.contact div {
+  margin-top: 1rem;
 }
 .center {
   width: 80vw;
