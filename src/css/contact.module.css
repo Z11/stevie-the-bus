@@ -1,15 +1,13 @@
-.contact {
-  padding: 3rem 0;
-}
-.contact div {
-  margin-top: 1rem;
-}
 .center {
   width: 80vw;
   margin: 0 auto;
 }
-
 .contact-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+}
+.contact-date {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
@@ -51,4 +49,23 @@
   width: 80vw;
   margin: 0 auto;
   background-color: var(--mainBlue);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .contact {
+    padding: 1rem 0;
+  }
+  .contact div {
+    margin-top: 0rem;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 600px) {
+  .contact {
+    padding: 3rem 0;
+  }
+  .contact div {
+    margin-top: 1rem;
+  }
 }

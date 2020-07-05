@@ -61,15 +61,19 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="date">Date of Event</label>
-              <input
-                type="date"
-                name="date"
-                id="date"
-                className={styles.formControl}
-                placeholder="date"
-                required
-              />
+              <section className={styles.contactDate}>
+                <article>
+                  <label htmlFor="date">Date of Event </label>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    className={styles.formControl}
+                    placeholder="date"
+                    required
+                  />
+                </article>
+              </section>
             </div>
             <div>
               <label htmlFor="location">Location of Event</label>
