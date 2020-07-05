@@ -21,12 +21,10 @@ const Footer = () => {
           )
         })}
       </div>
-      <div className={styles.contact}>
-        steviethephotobus@gmail.com | 713-333-4930
-      </div>
+      <div className={styles.contact}>steviethebus@gmail.com</div>
       <div className={styles.copyright}>
-        copyright &copy; Stevie The Photo Bus {new Date().getFullYear()} all
-        rights reserved
+        copyright &copy; Stevie The Bus {new Date().getFullYear()} all rights
+        reserved
       </div>
     </footer>
   )
