@@ -3,7 +3,7 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 module.exports = {
   siteMetadata: {
     title: `Stevie The Photo Bus`,
-    description: `Stevie The Photo Bus is located in Houston TX. We provided Photo Booth services for all events`,
+    description: `Stevie The Photo Bus is located in Houston TX. We provide Photo Booth services for all events`,
     twitterUsername: `@OhSnapItsRobe`,
     image: `/stevie-logo-twitter-card.png`,
     siteUrl: `https://www.steviethephotobus.com/`,
