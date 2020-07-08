@@ -22,14 +22,8 @@ export default styled(Title)`
   span {
     display: block;
   }
-  @media (min-width: 576px) {
-    span {
-      display: inline-block;
-    }
-  }
 
-  /* Mobile */
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 300px) and (max-width: 600px) {
     h4 {
       font-size: 2rem;
       text-align: center;
@@ -37,12 +31,27 @@ export default styled(Title)`
     }
   }
 
-  /* Desktop */
-  @media screen and (min-width: 600px) {
+  /*  Large devices (large desktops) */
+  @media screen and (min-width: 600px) and (max-width: 1600px) {
+    h4 {
+      font-size: 2rem;
+      text-align: ${props => (props.position ? props.position : "left")};
+      letter-spacing: 0.7px;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+
+  /*  Extra large devices (extra large desktops) */
+  @media (min-width: 1600px) {
     h4 {
       font-size: 2.6rem;
       text-align: ${props => (props.position ? props.position : "left")};
       letter-spacing: 1px;
+    }
+    span {
+      display: inline-block;
     }
   }
 `

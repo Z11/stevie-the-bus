@@ -25,8 +25,8 @@
   color: var(--primaryColor);
 }
 
-/*This For Mobile*/
-@media screen and (max-width: 800px) {
+/* Small devices (landscape phones) */
+@media screen and (min-width: 300px) and (max-width: 600px) {
   /* shows ancherlinks and pagelinks*/
   .show-nav {
     height: 170px;
@@ -83,8 +83,72 @@
   }
 }
 
-/*This For Desktop*/
-@media screen and (min-width: 800px) {
+/*  Large devices (large desktops) */
+@media screen and (min-width: 600px) and (max-width: 1600px) {
+  /* Controls bottom white section */
+  .nav-header {
+    height: 79px;
+  }
+  .nav-links {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 990;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    vertical-align: bottom; /* Align the element to the bottom   */
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .icons {
+    position: fixed;
+    right: 30px;
+    top: 0;
+    z-index: 990;
+    display: flex;
+    background-color: transparent;
+  }
+  .icons a {
+    display: block;
+    margin: 0.8rem 0.2rem;
+    fill: var(--mainBlue);
+    transition: var(--mainTransition);
+  }
+  .icons a:hover {
+    fill: var(--mainYellow);
+  }
+  .logoAlignRight {
+    display: none;
+  }
+  .nav-center {
+    max-width: 760px; /* Controls centering  */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn ease 0.6s;
+    -webkit-animation: fadeIn ease 0.6s;
+  }
+  .desktop-logo-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .desktop-logo-btn:hover {
+    cursor: pointer;
+  }
+  .mobile-logo-btn {
+    display: none;
+  }
+}
+
+/*  Extra large devices (extra large desktops) */
+@media (min-width: 1600px) {
   /* Controls bottom white section */
   .nav-header {
     height: 92px;

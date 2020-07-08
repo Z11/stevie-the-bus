@@ -1,6 +1,5 @@
 .packages {
   background: var(--mainWhite);
-  padding: 3rem 0;
 }
 .packages div {
   margin-top: 1rem;
@@ -17,8 +16,7 @@
   text-align: center;
 }
 
-/* Mobile */
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 600px) {
   .packages {
     padding: 1rem 0;
   }
@@ -28,19 +26,51 @@
   }
   .package-description {
     padding-left: 2rem;
-    border: 20px;
-    border-radius: 20px;
   }
   .package-options-description {
     margin-top: 4rem;
     text-align: center;
-    border: 20px;
-    border-radius: 20px;
   }
 }
 
-/* Desktop */
-@media screen and (min-width: 600px) {
+/*  Large devices (large desktops) */
+@media screen and (min-width: 600px) and (max-width: 1600px) {
+  .packages-center {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    grid-column-gap: 1.5rem;
+  }
+  .packages {
+    padding: 2.5rem 0;
+  }
+  .package-title {
+    margin: 0.7rem;
+    font-size: 1.65rem;
+  }
+  .package-description {
+    padding-left: 1.7rem;
+    font-size: 0.8rem;
+  }
+  .package-options-description {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*  Extra large devices (extra large desktops) */
+@media (min-width: 1600px) {
+  .packages-center {
+    width: 95vw;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(365px, 2fr));
+    grid-column-gap: 2rem;
+  }
   .packages {
     padding: 3rem 0;
   }
@@ -51,32 +81,13 @@
   .package-description {
     padding-left: 1.7rem;
     font-size: 1rem;
-    border: 20px;
-    border-radius: 20px;
   }
   .package-options-description {
     margin-top: 4rem;
     text-align: center;
     font-size: 1rem;
-    border: 20px;
-    border-radius: 20px;
   }
   p {
     margin-bottom: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .packages-center {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(365px, 2fr));
-    grid-column-gap: 2rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .packages-center {
-    width: 95vw;
-    max-width: 1170px;
   }
 }

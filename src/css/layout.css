@@ -41,8 +41,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-/* Mobile */
-@media screen and (max-width: 600px) {
+
+/* // Small devices (landscape phones) */
+@media screen and (min-width: 300px) and (max-width: 600px) {
   body {
     line-height: 1.5;
     font-size: 0.85rem;
@@ -51,8 +52,20 @@ main {
     margin-bottom: 0.5rem;
   }
 }
-/* Desktop */
-@media screen and (min-width: 600px) {
+
+/*  Large devices (large desktops) */
+@media screen and (min-width: 600px) and (max-width: 1600px) {
+  body {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  p {
+    margin-bottom: 0.85rem;
+  }
+}
+
+/*  Extra large devices (extra large desktops) */
+@media (min-width: 1600px) {
   body {
     line-height: 1.7;
     font-size: 1.2rem;
