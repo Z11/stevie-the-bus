@@ -29,8 +29,8 @@
   border-radius: 0.25rem;
 }
 .submit {
-  background-color: var(--primaryColor);
-  border-color: var(--primaryColor);
+  background-color: var(--mainYellow);
+  border-color: var(--mainYellow);
   text-transform: uppercase;
   color: var(--mainBlack);
   transition: var(--mainTransition);
