@@ -125,7 +125,7 @@ const Contact = () => {
               <textarea
                 name="message"
                 id="message"
-                rows="10"
+                rows="3"
                 className={styles.formControl}
                 placeholder="hello there"
               />
