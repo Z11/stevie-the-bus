@@ -42,7 +42,7 @@ const About = () => {
           <hr className={styles.border} />
           <p>{about_text[0].text}</p>
         </article>
-        <article className={styles.aboutImg}>
+        <article>
           <div>
             <Img
               fluid={about_imageSharp.childImageSharp.fluid}

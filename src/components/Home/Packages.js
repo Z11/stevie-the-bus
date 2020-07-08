@@ -63,7 +63,7 @@ const Packages = () => {
   return (
     <section className={styles.packages} id="packagesStevie">
       <Title title={packages_main_title[0].text} position="center" />
-      <div className={styles.center}>
+      <div className={styles.packagesCenter}>
         <article key={1}>
           <Img
             fluid={package_1_imageSharp.childImageSharp.fluid}
