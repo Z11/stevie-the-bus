@@ -30,7 +30,7 @@ export default styled(StyledHero)`
   }
 
   /*  Tablets */
-  @media screen and (min-width: 300px) and (max-width: 900px) {
+  @media screen and (min-width: 600px) and (max-width: 900px) {
     min-height: ${props => (props.home ? "80vh" : "40vh")};
   }
 
@@ -53,6 +53,6 @@ export default styled(StyledHero)`
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    min-height: ${props => (props.home ? "calc(95vh - 50px)" : "50vh")};
+    min-height: ${props => (props.home ? "calc(95vh - 45px)" : "50vh")};
   }
 `
