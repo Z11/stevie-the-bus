@@ -26,16 +26,16 @@ export default styled(StyledHero)`
 
   /*  Phones */
   @media screen and (min-width: 300px) and (max-width: 600px) {
-    min-height: ${props => (props.home ? "50vh" : "30vh")};
+    min-height: ${props => (props.home ? "40vh" : "30vh")};
   }
 
   /*  Tablets */
-  @media screen and (min-width: 600px) and (max-width: 900px) {
-    min-height: ${props => (props.home ? "80vh" : "40vh")};
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+    min-height: ${props => (props.home ? "70vh" : "40vh")};
   }
 
   /*  Large devices (large desktops) */
-  @media screen and (min-width: 900px) and (max-width: 1600px) {
+  @media screen and (min-width: 1000px) and (max-width: 1600px) {
     &:before,
     &:after {
       position: "fixed";

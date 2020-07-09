@@ -6,8 +6,8 @@ const Grid = styled.div`
   /*  Small devices (landscape phones) */
   @media screen and (min-width: 300px) and (max-width: 600px) {
     padding: 0rem 0.3rem 0.3rem 0.3rem;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    grid-auto-rows: 12rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-auto-rows: 15rem;
     grid-gap: 0.2rem;
   }
 
