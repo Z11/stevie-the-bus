@@ -23,18 +23,36 @@ export default styled(StyledHero)`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* mobile */
-  @media (max-width: 1000px) {
-    min-height: 50vh;
+
+  /*  Phones */
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    min-height: ${props => (props.home ? "50vh" : "30vh")};
   }
-  /* desktop */
-  @media (min-width: 1000px) {
+
+  /*  Tablets */
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    min-height: ${props => (props.home ? "80vh" : "40vh")};
+  }
+
+  /*  Large devices (large desktops) */
+  @media screen and (min-width: 900px) and (max-width: 1600px) {
     &:before,
     &:after {
       position: "fixed";
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    min-height: ${props => (props.home ? "calc(95vh - 60px)" : "50vh")};
+    min-height: ${props => (props.home ? "calc(95vh - 45px)" : "50vh")};
+  }
+
+  /*  Extra large devices (extra large desktops) */
+  @media (min-width: 1600px) {
+    &:before,
+    &:after {
+      position: "fixed";
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    min-height: ${props => (props.home ? "calc(95vh - 50px)" : "50vh")};
   }
 `
