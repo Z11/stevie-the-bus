@@ -63,14 +63,6 @@ const SEO = ({ description, lang, meta, title }) => {
           property: `og:image`,
           content: `${siteUrl}${image}`,
         },
-        {
-          property: `og:image:width`,
-          content: 400,
-        },
-        {
-          property: `og:image:height`,
-          content: 300,
-        },
         //twitter card
         {
           name: `twitter:card`,
