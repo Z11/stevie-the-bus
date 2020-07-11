@@ -23,6 +23,7 @@
     "gatsby-source-prismic-graphql": "3.4.1-alpha.0",
     "gatsby-transformer-sharp": "^2.5.0",
     "prop-types": "^15.7.2",
+    "react-device-detect": "^1.13.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-modal-image": "^2.5.0",

@@ -2,12 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
-const StyledHero = ({ img, className, children, home }) => {
+const StyledHero = ({ img, className, children, home, isIPad13 }) => {
   return (
     <BackgroundImage
       className={className}
       fluid={img}
       home={home}
+      isIPad13={isIPad13}
       critical={true}
     >
       {children}
@@ -30,17 +31,17 @@ export default styled(StyledHero)`
   }
 
   /*  Tablets */
-  @media screen and (min-width: 600px) and (max-width: 1200px) {
+  @media screen and (min-width: 600px) and (max-width: 1100px) {
     min-height: ${props => (props.home ? "70vh" : "40vh")};
   }
 
   /*  Large devices (large desktops) */
-  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+  @media screen and (min-width: 1100px) and (max-width: 1600px) {
     &:before,
     &:after {
-      position: "fixed";
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      position: ${props => (props.isIPad13 ? "scroll" : "fixed")};
+      background-repeat: ${props => (props.isIPad13 ? "scroll" : "no-repeat")};
+      background-attachment: ${props => (props.isIPad13 ? "scroll" : "fixed")};
     }
     min-height: ${props => (props.home ? "calc(95vh - 45px)" : "50vh")};
   }

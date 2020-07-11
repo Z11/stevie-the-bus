@@ -7,6 +7,7 @@ import Services from "../components/Home/Services"
 import Packages from "../components/Home/Packages"
 import Contact from "../components/Home/Contact"
 import SEO from "../components/seo"
+import { isIPad13 } from "react-device-detect"
 
 export default props => (
   <>
@@ -14,6 +15,7 @@ export default props => (
       <SEO title="Houston TX - Welcome to our VW Photo Booth" />
       <StyledHero
         home="true"
+        isIPad13={isIPad13}
         img={
           props.data.prismic.home_page.background_home_imageSharp
             .childImageSharp.fluid
@@ -22,6 +24,7 @@ export default props => (
       <About />
       <Services />
       <StyledHero
+        isIPad13={isIPad13}
         img={
           props.data.prismic.home_page.contact_end_imageSharp.childImageSharp
             .fluid
