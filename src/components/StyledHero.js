@@ -32,7 +32,7 @@ export default styled(StyledHero)`
 
   /*  Tablets */
   @media screen and (min-width: 600px) and (max-width: 1100px) {
-    min-height: ${props => (props.home ? "70vh" : "40vh")};
+    min-height: ${props => (props.home ? "55vh" : "40vh")};
   }
 
   /*  Large devices (large desktops) */
