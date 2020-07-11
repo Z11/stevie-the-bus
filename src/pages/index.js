@@ -7,7 +7,7 @@ import Services from "../components/Home/Services"
 import Packages from "../components/Home/Packages"
 import Contact from "../components/Home/Contact"
 import SEO from "../components/seo"
-import { isIPad13 } from "react-device-detect"
+import isIPad13 from "../helpers/deviceCheck"
 
 export default props => (
   <>
