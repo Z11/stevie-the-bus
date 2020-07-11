@@ -42,6 +42,15 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `description`,
           content: metaDescription,
         },
+        //facebook cards
+        {
+          property: `og:url`,
+          content: siteUrl,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
         {
           property: `og:title`,
           content: title,
@@ -51,9 +60,18 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          name: `og:image`,
+          content: `${siteUrl}${image}`,
         },
+        {
+          name: `og:image:width`,
+          content: 400,
+        },
+        {
+          name: `og:image:height`,
+          content: 300,
+        },
+        //twitter card
         {
           name: `twitter:card`,
           content: `summary_large_image`,
