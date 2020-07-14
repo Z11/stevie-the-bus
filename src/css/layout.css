@@ -46,7 +46,7 @@ main {
 @media screen and (min-width: 300px) and (max-width: 600px) {
   body {
     line-height: 1.5;
-    font-size: 0.85rem;
+    font-size: 0.86rem;
   }
   p {
     margin-bottom: 0.5rem;
