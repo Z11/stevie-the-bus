@@ -9,6 +9,9 @@
   background-color: var(--mainBlue);
   height: 6px;
 }
+.about-info {
+  white-space: pre-wrap;
+}
 
 /*  Small devices (landscape phones) */
 @media screen and (min-width: 300px) and (max-width: 600px) {

@@ -15,6 +15,12 @@
 .package-title {
   text-align: center;
 }
+.package-description {
+  white-space: pre-wrap;
+}
+.package-options-description {
+  white-space: pre-wrap;
+}
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .packages {
