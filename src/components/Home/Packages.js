@@ -70,12 +70,10 @@ const Packages = () => {
             alt="srvImage1"
           />
           <div className={styles.packageTitle}>
-            <p>{package_1_title[0].text}</p>
+            {package_1_title.map((item) => <p>{item.text}</p>)}
           </div>
           <div className={styles.packageDescription}>
-            {package_1_text.map((element, index) => {
-              return <p key={index}>{element.text}</p>
-            })}
+            {package_1_text.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
         <article key={2}>
@@ -84,12 +82,10 @@ const Packages = () => {
             alt="srvImage2"
           />
           <div className={styles.packageTitle}>
-            <p>{package_2_title[0].text}</p>
+            {package_2_title.map((item) => <p>{item.text}</p>)}
           </div>
           <div className={styles.packageDescription}>
-            {package_2_text.map((element, index) => {
-              return <p key={index}>{element.text}</p>
-            })}
+            {package_2_text.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
         <article key={3}>
@@ -98,17 +94,15 @@ const Packages = () => {
             alt="srvImage3"
           />
           <div className={styles.packageTitle}>
-            <p>{package_3_title[0].text}</p>
+            {package_3_title.map((item) => <p>{item.text}</p>)}
           </div>
           <div className={styles.packageDescription}>
-            {package_3_text.map((element, index) => {
-              return <p key={index}>{element.text}</p>
-            })}
+            {package_3_text.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
       </div>
       <div className={styles.packageOptionsDescription}>
-        <p>{options_text[0].text}</p>
+        {options_text.map((item) => <p>{item.text}</p>)}
       </div>
     </section>
   )

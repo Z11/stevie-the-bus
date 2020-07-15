@@ -51,10 +51,10 @@ const Services = () => {
             alt="desktop bus logo"
           />
           <div className={styles.serviceTitle}>
-            <p>{service_1_title[0].text}</p>
+            {service_1_title.map((item) => <p>{item.text}</p>)}
           </div>
           <div className={styles.serviceDescription}>
-            <p>{service_1_text[0].text}</p>
+            {service_1_text.map((item) => <p>{item.text}</p>)}
           </div>
         </article>
         <article key={2}>
@@ -63,10 +63,10 @@ const Services = () => {
             alt="desktop bus logo"
           />
           <div className={styles.serviceTitle}>
-            <p>{service_2_title[0].text}</p>
+            {service_2_title.map((item) => <p>{item.text}</p>)}
           </div>
           <div className={styles.serviceDescription}>
-            <p>{service_2_text[0].text}</p>
+            {service_2_text.map((item) => <p>{item.text}</p>)}
           </div>
         </article>
       </div>
