@@ -12,7 +12,7 @@ import isIPad13 from "../helpers/deviceCheck"
 export default props => (
   <>
     <Layout>
-      <SEO title="Houston TX - Welcome to our VW Photo Booth" />
+      <SEO title="Stevie The Photo Bus - Houston TX" />
       <StyledHero
         home="true"
         isIPad13={isIPad13}
