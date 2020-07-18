@@ -28,7 +28,7 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const { twitterUsername, siteUrl, image } = site.siteMetadata
+  const { twitterUsername, siteUrl, keywords, image } = site.siteMetadata
 
   return (
     <Helmet
@@ -41,6 +41,10 @@ const SEO = ({ description, lang, meta, title }) => {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: keywords,
         },
         //facebook cards
         {

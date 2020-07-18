@@ -5,7 +5,8 @@ module.exports = {
     title: `Stevie The Photo Bus`,
     description: `Stevie The Photo Bus is located in Houston TX. We provide Photo Booth services for all events`,
     twitterUsername: `@OhSnapItsRobe`,
-    image: `/stevie-logo-twitter-card.png`,
+    image: `/card-img.png`,
+    keywords: `photo bus, houston photo bus, photo bus houston, wolkswagen photo bus`,
     siteUrl: `https://www.steviethephotobus.com/`,
   },
   plugins: [
