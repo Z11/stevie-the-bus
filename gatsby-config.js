@@ -22,12 +22,17 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        exclude: ["/preview/"],
         // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 0,
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/preview/`],
+      }
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
