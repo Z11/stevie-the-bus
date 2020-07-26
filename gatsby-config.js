@@ -2,8 +2,10 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
   siteMetadata: {
-    title: `Stevie The Photo Bus`,
-    description: `We provide Photo Booth rental services for all events`,
+    title: `Stevie the Photo Bus | Houston VW Bus Photo Booth`,
+    description: `Stevie the Photo Bus is Houston’s grooviest photo booth experience. Our vintage 1977 VW Bus, Stevie, has a photo booth inside to capture memories that will last a lifetime, and add a nostalgic vibe to your event. She is available for all types of parties, weddings, and corporate events. Grab a couple of props and strike a pose! 
+    We are a rental photo booth service in Houston and are fully prepared to make your event enjoyable and memorable. We will always have a technician onsite to set up the bus and attend your guests. The booth is easy to use so your guests can have fun taking pictures, and receive physical and digitals copies of their high-quality photos. 
+    Aside from being a photobooth, Stevie can be used as a prop for your next video or photo shoot. We began this journey renting the bus to photographers for their photoshoots and we plan to continue that service. We are happy to work with models, photographers, brides, graduates, couples and more, to make your photos pop!`,
     twitterUsername: `@OhSnapItsRobe`,
     image: `/card-img.png`,
     keywords: `photo bus, houston photo bus, photo bus houston, wolkswagen photo bus, vw photo bus, volkswagen rental, vw rental`,
