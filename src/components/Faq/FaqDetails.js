@@ -64,7 +64,7 @@ const Faq = () => {
         <article key={1} className={styles.faqCategories}>
           {listOfCategories.map(item => (
             <div key={item.id}>
-            <AnchorLink className={styles.faqAnchorSettings} to={`/faq#${item.category.replace(/\s+/g, '')}`}>{item.category}</AnchorLink>
+            <AnchorLink to={`/faq#${item.category.replace(/\s+/g, '')}`}>{item.category}</AnchorLink>
             </div>
           ))}
         </article>

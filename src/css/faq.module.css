@@ -1,11 +1,3 @@
-.faq-categories {
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-  width: 20vw;
-}
-.faq-details {
-  width: 55vw;
-}
 .faq-center {
   margin: 0 auto;
 }
@@ -14,9 +6,6 @@
 }
 .faq-answer {
   white-space: pre-wrap;
-}
-.faq-anchor-settings {
-  /* offset-position: 10ch 8em; */
 }
 .border {
   border: 5px var(--mainBlue);
@@ -31,8 +20,13 @@
 /*  Small devices (landscape phones) */
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .faqs {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 1.5rem;
+  }
+  .faq-categories {
+    display: none;
+  }
+  .faq-details {
+    width: auto;
   }
   .faq-category-anchor-name {
     margin: 0.5rem;
@@ -42,33 +36,36 @@
   }
   .faq-category-title {
     margin: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: bold;
   }
   .faq-question {
     margin: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
   }
   .faq-answer {
     margin: 0.6rem;
-    margin-bottom: 3rem;
   }
 }
 
 /*  Large devices (large desktops) */
-@media screen and (min-width: 600px) and (max-width: 1600px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .faqs {
+    margin: 5rem;
+  }
   .faq-center {
     max-width: 950px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2.5rem;
+    position: center;
   }
-  .faqs {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+  .faq-categories {
+    display: none;
+  }
+  .faq-details {
+    width: 80vw;
   }
   .faq-category-anchor-name {
     margin: 0.25rem;
@@ -77,9 +74,9 @@
     font-size: 1.2rem;
   }
   .faq-category-title {
-    margin: 0.5rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-left: 1rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
     font-size: 2rem;
     font-weight: bold;
   }
@@ -95,7 +92,11 @@
 }
 
 /*  Extra large devices (extra large desktops) */
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
+  .faqs {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
   .faq-center {
     width: 95vw;
     max-width: 1170px;
@@ -103,9 +104,13 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
   }
-  .faqs {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+  .faq-categories {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    width: 20vw;
+  }
+  .faq-details {
+    width: 55vw;
   }
   .faq-category-anchor-name {
     margin: 0.5rem;
@@ -114,7 +119,7 @@
     font-size: 1.3rem;
   }
   .faq-category-title {
-    margin: 1rem;
+    margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
