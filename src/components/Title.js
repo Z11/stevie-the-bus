@@ -25,7 +25,7 @@ export default styled(Title)`
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       text-align: center;
       letter-spacing: 0.5px;
     }
