@@ -24,7 +24,8 @@
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .packages {
-    padding: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .package-title {
     margin: 0.5rem;
@@ -47,7 +48,8 @@
     grid-column-gap: 1rem;
   }
   .packages {
-    padding: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .package-title {
     margin: 0.7rem;
@@ -76,7 +78,8 @@
     grid-column-gap: 1.5rem;
   }
   .packages {
-    padding: 2.5rem 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   .package-title {
     margin: 0.7rem;
@@ -106,7 +109,8 @@
     grid-column-gap: 2rem;
   }
   .packages {
-    padding: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   .package-title {
     margin: 1rem;

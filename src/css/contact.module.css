@@ -25,7 +25,8 @@
 /*  Small devices (landscape phones) */
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .contact {
-    padding: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .contact div {
     margin-top: 0rem;
@@ -61,7 +62,8 @@
     margin: 0 auto;
   }
   .contact {
-    padding: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .contact div {
     margin-top: 0rem;
@@ -97,7 +99,8 @@
     margin: 0 auto;
   }
   .contact {
-    padding: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   .contact div {
     margin-top: 0rem;
