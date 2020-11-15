@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "../../css/faq.module.css"
 import Title from "../Title"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import Accordion from "./Accordion/Accordion"
 
 const getFaqDetails = graphql`
   query faqCategoryQueryAndFaqDetailsQuery {
@@ -57,6 +58,8 @@ const Faq = () => {
     }
   })
 
+  const [active, setActive] = useState("");
+
   return (
     <section className={styles.faqs}>
       <Title title={pageTitle[0].text} position="center" />
@@ -72,17 +75,16 @@ const Faq = () => {
           {listOfCategories.map(item => (
             <div key={item.id} id={item.category.replace(/\s+/g, '')}>
               <div className={styles.faqCategoryTitle} >{item.category}</div>
-              <div className={styles.faqDescription}>
                 {listOfFAQs
                   .filter(x => x.category === item.category)
                   .map(item => (
-                    <div key={item.id}>
-                      <p className={styles.faqQuestion}>{item.question}</p>
-                      <p className={styles.faqAnswer}>{item.answer}</p>
-                      <hr className={styles.border} />
-                    </div>
+                    <Accordion key={item.id} title={item.question} description={item.answer} active={active} setActive={setActive}/>
+                    // <div key={item.id}>
+                    //   <p className={styles.faqQuestion}>{item.question}</p>
+                    //   <p className={styles.faqAnswer}>{item.answer}</p>
+                    //   <hr className={styles.border} />
+                    // </div>
                   ))}
-              </div>
             </div>
           ))}
         </article>
