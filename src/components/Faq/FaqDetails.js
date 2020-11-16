@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import styles from "../../css/faq.module.css"
 import Title from "../Title"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Accordion from "./Accordion/Accordion"
 
@@ -42,7 +40,6 @@ const Faq = () => {
   const {
     allQuestion_categorys: { edges: edgeCategories },
     page: { pageTitle, questions },
-    page,
   } = useStaticQuery(getFaqDetails).prismic
 
   const listOfCategories = edgeCategories.map((x, index) => {
@@ -58,36 +55,30 @@ const Faq = () => {
     }
   })
 
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("")
 
   return (
     <section className={styles.faqs}>
       <Title title={pageTitle[0].text} position="center" />
       <div className={styles.faqCenter}>
-        <article key={1} className={styles.faqCategories}>
+        <div className={styles.faqDetails}>
           {listOfCategories.map(item => (
-            <div key={item.id}>
-            <AnchorLink to={`/faq#${item.category.replace(/\s+/g, '')}`}>{item.category}</AnchorLink>
+            <div key={item.id} id={item.category.replace(/\s+/g, "")}>
+              <div className={styles.faqCategoryTitle}>{item.category}</div>
+              {listOfFAQs
+                .filter(x => x.category === item.category)
+                .map(item => (
+                  <Accordion
+                    key={item.id}
+                    title={item.question}
+                    description={item.answer}
+                    active={active}
+                    setActive={setActive}
+                  />
+                ))}
             </div>
           ))}
-        </article>
-        <article key={2} className={styles.faqDetails}>
-          {listOfCategories.map(item => (
-            <div key={item.id} id={item.category.replace(/\s+/g, '')}>
-              <div className={styles.faqCategoryTitle} >{item.category}</div>
-                {listOfFAQs
-                  .filter(x => x.category === item.category)
-                  .map(item => (
-                    <Accordion key={item.id} title={item.question} description={item.answer} active={active} setActive={setActive}/>
-                    // <div key={item.id}>
-                    //   <p className={styles.faqQuestion}>{item.question}</p>
-                    //   <p className={styles.faqAnswer}>{item.answer}</p>
-                    //   <hr className={styles.border} />
-                    // </div>
-                  ))}
-            </div>
-          ))}
-        </article>
+        </div>
       </div>
     </section>
   )

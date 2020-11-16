@@ -1,17 +1,9 @@
 .accordion {
   width: 100%;
-  max-width: 540px;
-  margin: 18px auto;
-}
-.accordion-heading {
-  margin: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
 }
 .accordion-container {
   cursor: pointer;
   width: 100%;
-  max-width: 480px;
   margin: auto;
 }
 .accordion-heading .accordion-container {
@@ -19,9 +11,6 @@
   align-items: center;
   justify-content: space-between;
 }
-/* .accordion-heading span p {
-  cursor: pointer;
-} */
 .accordion-content {
   display: flex;
   max-height: 0;
@@ -31,19 +20,101 @@
 }
 .accordion-content-show {
   max-height: 500px;
-  transition: all 400ms ease-out;
   opacity: 1;
 }
-
+.arrow {
+  height: 1rem;
+  color: var(--primaryColor);
+}
+.rotate {
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.rotate-down {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.rotate-up {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
 /*  Small devices (landscape phones) */
 @media screen and (min-width: 300px) and (max-width: 600px) {
+  .accordion {
+    max-width: 540px;
+  }
+  .accordion-container {
+    max-width: 540px;
+  }
+  .accordion-heading {
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
   .accordion-content p {
-    margin: 0.6rem;
+    margin: 0rem 0.6rem 0.6rem 0.6rem;
     white-space: pre-wrap;
   }
-
   .border {
     border: 5px var(--mainBlue);
+    border-radius: 5px;
+    margin: 1rem 0;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--darkGrey);
+    width: 98%;
+  }
+}
+/*  Large devices (large desktops) */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .accordion {
+    max-width: 700px;
+  }
+  .accordion-container {
+    max-width: 700px;
+  }
+  .accordion-heading {
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .accordion-content p {
+    margin: 0rem 1rem 1rem 1rem;
+    white-space: pre-wrap;
+  }
+  .border {
+    border: 5px var(--mainBlue);
+    border-radius: 5px;
+    margin: 1rem 0;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--darkGrey);
+    width: 98%;
+  }
+}
+
+/*  Extra large devices (extra large desktops) */
+@media (min-width: 1200px) {
+  .accordion {
+    max-width: 1540px;
+  }
+  .accordion-container {
+    max-width: 1480px;
+  }
+  .accordion-heading {
+    margin: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .accordion-content p {
+    margin: 0rem 1rem 1rem 1rem;
+    white-space: pre-wrap;
+  }
+  .border {
+    border: 5px var(--darkGrey);
     border-radius: 5px;
     margin: 1rem 0;
     height: 2px;

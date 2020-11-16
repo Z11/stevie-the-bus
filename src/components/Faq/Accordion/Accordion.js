@@ -1,16 +1,15 @@
 import React from "react"
 import styles from "./accordion.module.css"
+import FaArrow from "../../../svgs/arrowIcon.svg"
 
 const Accordion = ({ title, description, active, setActive }) => {
-  console.log(active, active === title)
+  console.log(FaArrow)
   return (
     <div className={styles.accordion}>
       <div className={styles.accordionHeading}>
         <div className={styles.accordionContainer} onClick={() => setActive(active === title ? "" : title)}>
           <p>{title}</p>
-          <span >
-            X
-          </span>
+          <FaArrow className={(active === title ? `${styles.rotateDown}` : `${styles.rotateUp}`) + ` ${styles.rotate} ${styles.arrow}`} />
         </div>
       </div>
 
