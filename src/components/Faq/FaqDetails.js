@@ -63,7 +63,11 @@ const Faq = () => {
       <div className={styles.faqCenter}>
         <div className={styles.faqDetails}>
           {listOfCategories.map(item => (
-            <div key={item.id} id={item.category.replace(/\s+/g, "")}>
+            <div
+              className={styles.faqContainer}
+              key={item.id}
+              id={item.category.replace(/\s+/g, "")}
+            >
               <div className={styles.faqCategoryTitle}>{item.category}</div>
               {listOfFAQs
                 .filter(x => x.category === item.category)

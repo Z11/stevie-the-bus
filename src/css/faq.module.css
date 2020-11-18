@@ -1,5 +1,10 @@
 .faq-center {
   margin: 0 auto;
+  width: 80vw;
+}
+.faq-container {
+  width: 100%;
+  margin: auto;
 }
 .faq-category-title {
   color: var(--mainBlue);
@@ -19,30 +24,27 @@
 /*  Large devices (large desktops) */
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .faqs {
-    margin: 5rem;
+    margin: 2rem;
   }
-  .faq-center {
-    width: 55vw;
+  .faq-container {
+    max-width: 600px;
   }
   .faq-category-title {
     margin: 1rem;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.65rem;
   }
 }
 
 /*  Extra large devices (extra large desktops) */
 @media (min-width: 1200px) {
   .faqs {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 2rem;
   }
-  .faq-center {
-    width: 55vw;
+  .faq-container {
+    max-width: 600px;
   }
   .faq-category-title {
     margin: 1rem;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.65rem;
   }
 }
