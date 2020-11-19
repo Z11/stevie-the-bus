@@ -74,17 +74,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `700`],
-          },
-        ],
-      },
-    },
-    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,
@@ -107,6 +96,7 @@ module.exports = {
     //   },
     // },
     // `gatsby-plugin-playground`, ///___playground
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
   ],
