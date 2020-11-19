@@ -40,7 +40,7 @@ const About = () => {
         <article className={styles.aboutInfo}>
           <Title title={about_title[0].text} position="left"></Title>
           <hr className={styles.border} />
-          {about_text.map((item) => <p>{item.text}</p>)}
+          {about_text.map((item, index) => <p key={index}>{item.text}</p>)}
         </article>
         <article>
           <div>

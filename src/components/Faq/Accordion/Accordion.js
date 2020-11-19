@@ -3,7 +3,6 @@ import styles from "./accordion.module.css"
 import FaArrow from "../../../svgs/arrowIcon.svg"
 
 const Accordion = ({ title, description, active, setActive }) => {
-  console.log(FaArrow)
   return (
     <div className={styles.accordionCenter}>
       <div className={styles.accordionHeading}>
