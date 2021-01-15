@@ -116,7 +116,7 @@ const Contact = () => {
                 name="package"
                 value="photoVideoShoot"
               />
-              <label htmlFor="photoVideoShoot"> Photo / Shoot Video</label>
+              <label htmlFor="photoVideoShoot"> Photo / Video Shoot</label>
               <br />
               <br />
             </div>
@@ -131,6 +131,7 @@ const Contact = () => {
               />
             </div>
             <div>
+            <br />
               <input
                 type="submit"
                 value="submit here"

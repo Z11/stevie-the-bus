@@ -10,14 +10,24 @@ export default [
     text: "Packages",
   },
   {
+    type: "page",
+    path: "/gallery",
+    text: "Gallery",
+  },
+  {
     type: "img",
     path: "/",
     text: "home",
   },
   {
     type: "page",
-    path: "/gallery",
-    text: "Gallery",
+    path: "/events",
+    text: "Events",
+  },
+  {
+    type: "page",
+    path: "/faq",
+    text: "FAQ",
   },
   {
     type: "link",
