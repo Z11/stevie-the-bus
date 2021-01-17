@@ -17,7 +17,7 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <Link to={links[2].path} className={styles.mobileLogoBtn}>
+          <Link to={links[3].path} className={styles.mobileLogoBtn}>
             <IconStevie />
           </Link>
           <button
