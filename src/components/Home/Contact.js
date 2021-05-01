@@ -86,6 +86,50 @@ const Contact = () => {
                 required
               />
             </div>
+            <br />
+            <div>
+              <label htmlFor="details">I would like to know...</label>
+              <br />
+              <input
+                type="radio"
+                id="serviceQuote"
+                name="details"
+                value="serviceQuote"
+              />
+              <label htmlFor="serviceQuote"> Service Quote</label>
+              <br />
+              <input
+                type="radio"
+                id="dateAvailable"
+                name="details"
+                value="dateAvailable"
+              />
+              <label htmlFor="dateAvailable"> If my date is available</label>
+              <br />
+              <input
+                type="radio"
+                id="rateAndAvailability"
+                name="details"
+                value="rateAndAvailability"
+              />
+              <label htmlFor="rateAndAvailability">
+                {" "}
+                Both rental rate and availability
+              </label>
+              <br />
+              <br />
+            </div>
+            <div>
+              <label htmlFor="vehicle"> I'm interested in booking...</label>
+              <br />
+              <input type="radio" id="stevie" name="vehicle" value="stevie" />
+              <label htmlFor="stevie"> Stevie (‘77 VW Bus)</label>
+              <br />
+              <input type="radio" id="lindsey" name="vehicle" value="lindsey" />
+              <label htmlFor="lindsey"> Lindsey (‘66 VW Beetle)</label>
+              <br />
+              <br />
+            </div> 
             <div>
               <label htmlFor="services">
                 I am interested in booking for...
@@ -98,7 +142,7 @@ const Contact = () => {
                 value="photoVideoShoot"
               />
               <label htmlFor="photoVideoShoot">
-              {" "}
+                {" "}
                 Photo / Video Shoot (Vehicle Prop Only)
               </label>
               <br />
@@ -145,12 +189,7 @@ const Contact = () => {
               />
               <label htmlFor="wedding"> Wedding</label>
               <br />
-              <input
-                type="radio"
-                id="other"
-                name="services"
-                value="other"
-              />
+              <input type="radio" id="other" name="services" value="other" />
               <label htmlFor="other"> Other</label>
               <br />
               <br />
@@ -162,49 +201,26 @@ const Contact = () => {
                 id="message"
                 rows="3"
                 className={styles.formControl}
+                required
               />
             </div>
             <div>
-              <label htmlFor="details">I would like to know...</label>
-              <br />
-              <input
-                type="radio"
-                id="serviceQuote"
-                name="details"
-                value="serviceQuote"
-              />
-              <label htmlFor="serviceQuote"> Service Quote</label>
-              <br />
-              <input
-                type="radio"
-                id="dateAvailable"
-                name="details"
-                value="dateAvailable"
-              />
-              <label htmlFor="dateAvailable"> If my date is available</label>
-              <br />
-              <input
-                type="radio"
-                id="rateAndAvailability"
-                name="details"
-                value="rateAndAvailability"
-              />
-              <label htmlFor="rateAndAvailability">
-                {" "}
-                Both rental rate and availability
-              </label>
-              <br />
-              <br />
+            <label htmlFor="guestCount">Estimated guest count for photo booth bus</label>
+            <section className={styles.contactName}>
+                <article>
+                  <input
+                    type="number"
+                    name="guestCount"
+                    id="guestCount"
+                    className={styles.formControl}
+                  />
+                </article>
+              </section>
             </div>
             <div>
               <label htmlFor="source"> How did you find us?</label>
               <br />
-              <input
-                type="radio"
-                id="google"
-                name="source"
-                value="google"
-              />
+              <input type="radio" id="google" name="source" value="google" />
               <label htmlFor="google"> Google</label>
               <br />
               <input
@@ -230,7 +246,6 @@ const Contact = () => {
                 value="Bridal Show"
               />
               <label htmlFor="Bridal Show"> Bridal Show</label>
-              <br />
               <br />
             </div>
             <div>
