@@ -210,6 +210,7 @@ const Contact = () => {
                 <article>
                   <input
                     type="number"
+                    min="0"
                     name="guestCount"
                     id="guestCount"
                     className={styles.formControl}
