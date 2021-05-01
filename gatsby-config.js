@@ -8,7 +8,7 @@ module.exports = {
     Aside from being a photobooth, Stevie can be used as a prop for your next video or photo shoot. We began this journey renting the bus to photographers for their photoshoots and we plan to continue that service. We are happy to work with models, photographers, brides, graduates, couples and more, to make your photos pop!`,
     twitterUsername: `@OhSnapItsRobe`,
     image: `/card-img.png`,
-    keywords: `photo bus, houston photo bus, photo bus houston, wolkswagen photo bus, vw photo bus, volkswagen rental, vw rental`,
+    keywords: `boho wedding, bohemian wedding, boho photo booth, houston boho wedding, photo bus, houston photo bus, photo bus houston, wolkswagen photo bus, vw photo bus, volkswagen rental, vw rental`,
     siteUrl: `https://www.steviethephotobus.com/`,
   },
   plugins: [

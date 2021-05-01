@@ -87,51 +87,154 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="package">
-                Which package are you interested in ?
+              <label htmlFor="services">
+                I am interested in booking for...
               </label>
-              <br />
-              <input type="radio" id="dreams" name="package" value="dreams" />
-              <label htmlFor="dreams"> Dreams</label>
-              <br />
-              <input
-                type="radio"
-                id="everywhere"
-                name="package"
-                value="everywhere"
-              />
-              <label htmlFor="everywhere"> Everywhere</label>
-              <br />
-              <input
-                type="radio"
-                id="dontStop"
-                name="package"
-                value="dontStop"
-              />
-              <label htmlFor="dontStop"> Don't Stop</label>
               <br />
               <input
                 type="radio"
                 id="photoVideoShoot"
-                name="package"
+                name="services"
                 value="photoVideoShoot"
               />
-              <label htmlFor="photoVideoShoot"> Photo / Video Shoot</label>
+              <label htmlFor="photoVideoShoot">
+              {" "}
+                Photo / Video Shoot (Vehicle Prop Only)
+              </label>
+              <br />
+              <input
+                type="radio"
+                id="photoShoot"
+                name="services"
+                value="photoShoot"
+              />
+              <label htmlFor="photoShoot">
+                {" "}
+                Photo Shoot (Vehicle + Photographer)
+              </label>
+              <br />
+              <input
+                type="radio"
+                id="miniSessions"
+                name="services"
+                value="miniSessions"
+              />
+              <label htmlFor="miniSessions"> Mini Sessions</label>
+              <br />
+              <input
+                type="radio"
+                id="privateParty"
+                name="services"
+                value="privateParty"
+              />
+              <label htmlFor="privateParty"> Private Party</label>
+              <br />
+              <input
+                type="radio"
+                id="photoBoothBus"
+                name="services"
+                value="photoBoothBus"
+              />
+              <label htmlFor="photoBoothBus"> Photo Booth Bus</label>
+              <br />
+              <input
+                type="radio"
+                id="wedding"
+                name="services"
+                value="wedding"
+              />
+              <label htmlFor="wedding"> Wedding</label>
+              <br />
+              <input
+                type="radio"
+                id="other"
+                name="services"
+                value="other"
+              />
+              <label htmlFor="other"> Other</label>
               <br />
               <br />
             </div>
             <div>
-              <label htmlFor="message">Event or Photo Shoot Description</label>
+              <label htmlFor="message">Tell us about your event</label>
               <textarea
                 name="message"
                 id="message"
                 rows="3"
                 className={styles.formControl}
-                placeholder="hello there"
               />
             </div>
             <div>
-            <br />
+              <label htmlFor="details">I would like to know...</label>
+              <br />
+              <input
+                type="radio"
+                id="serviceQuote"
+                name="details"
+                value="serviceQuote"
+              />
+              <label htmlFor="serviceQuote"> Service Quote</label>
+              <br />
+              <input
+                type="radio"
+                id="dateAvailable"
+                name="details"
+                value="dateAvailable"
+              />
+              <label htmlFor="dateAvailable"> If my date is available</label>
+              <br />
+              <input
+                type="radio"
+                id="rateAndAvailability"
+                name="details"
+                value="rateAndAvailability"
+              />
+              <label htmlFor="rateAndAvailability">
+                {" "}
+                Both rental rate and availability
+              </label>
+              <br />
+              <br />
+            </div>
+            <div>
+              <label htmlFor="source"> How did you find us?</label>
+              <br />
+              <input
+                type="radio"
+                id="google"
+                name="source"
+                value="google"
+              />
+              <label htmlFor="google"> Google</label>
+              <br />
+              <input
+                type="radio"
+                id="Instagram"
+                name="source"
+                value="Instagram"
+              />
+              <label htmlFor="Instagram"> Instagram</label>
+              <br />
+              <input
+                type="radio"
+                id="Facebook"
+                name="source"
+                value="Facebook"
+              />
+              <label htmlFor="Facebook"> Facebook</label>
+              <br />
+              <input
+                type="radio"
+                id="Bridal Show"
+                name="source"
+                value="Bridal Show"
+              />
+              <label htmlFor="Bridal Show"> Bridal Show</label>
+              <br />
+              <br />
+            </div>
+            <div>
+              <br />
               <input
                 type="submit"
                 value="submit here"
