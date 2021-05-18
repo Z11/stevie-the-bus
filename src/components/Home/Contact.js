@@ -120,13 +120,16 @@ const Contact = () => {
               <br />
             </div>
             <div>
-              <label htmlFor="vehicle"> I'm interested in booking...</label>
+              <label htmlFor="vehicle">I'm interested in booking...</label>
               <br />
               <input type="radio" id="stevie" name="vehicle" value="stevie" />
-              <label htmlFor="stevie"> Stevie (‘77 VW Bus)</label>
+              <label htmlFor="stevie"> Stevie (‘77 VW Bus) Prop</label>
               <br />
               <input type="radio" id="lindsey" name="vehicle" value="lindsey" />
-              <label htmlFor="lindsey"> Lindsey (‘66 VW Beetle)</label>
+              <label htmlFor="lindsey"> Lindsey (‘66 VW Beetle) Prop</label>
+              <br />
+              <input type="radio" id="steviePhotoBus" name="vehiclePhoto" value="stevie" />
+              <label htmlFor="steviePhotoBus"> Stevie Photo Booth Bus</label>
               <br />
               <br />
             </div> 
@@ -175,14 +178,6 @@ const Contact = () => {
               <br />
               <input
                 type="radio"
-                id="photoBoothBus"
-                name="services"
-                value="photoBoothBus"
-              />
-              <label htmlFor="photoBoothBus"> Photo Booth Bus</label>
-              <br />
-              <input
-                type="radio"
                 id="wedding"
                 name="services"
                 value="wedding"
@@ -195,7 +190,7 @@ const Contact = () => {
               <br />
             </div>
             <div>
-              <label htmlFor="message">Tell us about your event</label>
+              <label htmlFor="message">Tell us about your event:</label>
               <textarea
                 name="message"
                 id="message"
@@ -203,6 +198,20 @@ const Contact = () => {
                 className={styles.formControl}
                 required
               />
+            </div>
+            <div>
+            <label htmlFor="hourCount">How many hours do you need for the rental?</label>
+            <section className={styles.contactName}>
+                <article>
+                  <input
+                    type="number"
+                    min="1"
+                    name="hourCount"
+                    id="hourCount"
+                    className={styles.formControl}
+                  />
+                </article>
+              </section>
             </div>
             <div>
             <label htmlFor="guestCount">Estimated guest count for photo booth bus</label>
