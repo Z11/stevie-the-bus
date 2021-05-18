@@ -42,7 +42,7 @@ const Contact = () => {
               <label htmlFor="email">Email Address</label>
               <input
                 type="text"
-                name="Email Address"
+                name="email"
                 id="email"
                 className={styles.formControl}
                 placeholder="email"
