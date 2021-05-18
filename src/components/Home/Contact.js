@@ -41,7 +41,7 @@ const Contact = () => {
             <div>
               <label htmlFor="email">Email Address</label>
               <input
-                type="email"
+                type="text"
                 name="Email Address"
                 id="email"
                 className={styles.formControl}
