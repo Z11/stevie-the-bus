@@ -20,7 +20,7 @@ const Contact = () => {
                   <label htmlFor="first name">First Name</label>
                   <input
                     type="text"
-                    name="first name"
+                    name="First Name"
                     id="first name"
                     className={styles.formControl}
                     placeholder="first name"
@@ -30,7 +30,7 @@ const Contact = () => {
                   <label htmlFor="last name">Last Name</label>
                   <input
                     type="text"
-                    name="last name"
+                    name="Last Name"
                     id="last name"
                     className={styles.formControl}
                     placeholder="last name"
@@ -41,8 +41,8 @@ const Contact = () => {
             <div>
               <label htmlFor="email">Email Address</label>
               <input
-                type="text"
-                name="email"
+                type="email"
+                name="Email Address"
                 id="email"
                 className={styles.formControl}
                 placeholder="email"
@@ -53,7 +53,7 @@ const Contact = () => {
               <label htmlFor="phone">Phone Number</label>
               <input
                 type="text"
-                name="phone"
+                name="Phone Number"
                 id="phone"
                 className={styles.formControl}
                 placeholder="phone"
@@ -66,7 +66,7 @@ const Contact = () => {
                   <label htmlFor="date">Date of Event </label>
                   <input
                     type="date"
-                    name="date"
+                    name="Date of Event"
                     id="date"
                     className={styles.formControl}
                     placeholder="date"
@@ -78,8 +78,8 @@ const Contact = () => {
             <div>
               <label htmlFor="location">Location of Event</label>
               <input
-                type="location"
-                name="location"
+                type="text"
+                name="Location of Event"
                 id="location"
                 className={styles.formControl}
                 placeholder="location"
@@ -93,7 +93,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="serviceQuote"
-                name="details"
+                name="I would like to know..."
                 value="Service Quote"
               />
               <label htmlFor="serviceQuote"> Service Quote</label>
@@ -101,16 +101,16 @@ const Contact = () => {
               <input
                 type="radio"
                 id="dateAvailable"
-                name="details"
+                name="I would like to know..."
                 value="Date Available"
               />
-              <label htmlFor="Date Available"> If my date is available</label>
+              <label htmlFor="DateAvailable"> If my date is available</label>
               <br />
               <input
                 type="radio"
                 id="rateAndAvailability"
-                name="details"
-                value="Rate And Availability"
+                name="I would like to know..."
+                value="Both rental rate and availability"
               />
               <label htmlFor="rateAndAvailability">
                 {" "}
@@ -124,24 +124,24 @@ const Contact = () => {
               <br />
               <input
                 type="radio"
-                id="stevie"
-                name="vehicle"
+                id="stevieProp"
+                name="I'm interested in booking..."
                 value="Stevie (‘77 VW Bus) Prop"
               />
-              <label htmlFor="stevie"> Stevie (‘77 VW Bus) Prop</label>
+              <label htmlFor="stevieProp"> Stevie (‘77 VW Bus) Prop</label>
               <br />
               <input
                 type="radio"
-                id="lindsey"
-                name="vehicle"
+                id="lindseyProp"
+                name="I'm interested in booking..."
                 value="Lindsey (‘66 VW Beetle) Prop"
               />
-              <label htmlFor="lindsey"> Lindsey (‘66 VW Beetle) Prop</label>
+              <label htmlFor="lindseyProp"> Lindsey (‘66 VW Beetle) Prop</label>
               <br />
               <input
                 type="radio"
                 id="steviePhotoBus"
-                name="vehiclePhoto"
+                name="I'm interested in booking..."
                 value="Stevie Photo Booth Bus"
               />
               <label htmlFor="steviePhotoBus"> Stevie Photo Booth Bus</label>
@@ -156,7 +156,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="photoVideoShoot"
-                name="services"
+                name="I am interested in booking for..."
                 value="Photo Video Shoot"
               />
               <label htmlFor="photoVideoShoot">
@@ -167,7 +167,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="photoShoot"
-                name="services"
+                name="I am interested in booking for..."
                 value="Photo Shoot"
               />
               <label htmlFor="photoShoot">
@@ -178,7 +178,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="miniSessions"
-                name="services"
+                name="I am interested in booking for..."
                 value="Mini Sessions"
               />
               <label htmlFor="miniSessions"> Mini Sessions</label>
@@ -186,7 +186,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="privateParty"
-                name="services"
+                name="I am interested in booking for..."
                 value="Private Party"
               />
               <label htmlFor="privateParty"> Private Party</label>
@@ -194,12 +194,17 @@ const Contact = () => {
               <input
                 type="radio"
                 id="wedding"
-                name="services"
+                name="I am interested in booking for..."
                 value="Wedding"
               />
               <label htmlFor="wedding"> Wedding</label>
               <br />
-              <input type="radio" id="other" name="services" value="other" />
+              <input
+                type="radio"
+                id="other"
+                name="I am interested in booking for..."
+                value="other"
+              />
               <label htmlFor="other"> Other</label>
               <br />
               <br />
@@ -207,7 +212,7 @@ const Contact = () => {
             <div>
               <label htmlFor="message">Tell us about your event:</label>
               <textarea
-                name="message"
+                name="Tell us about your event:"
                 id="message"
                 rows="3"
                 className={styles.formControl}
@@ -223,7 +228,7 @@ const Contact = () => {
                   <input
                     type="number"
                     min="1"
-                    name="hourCount"
+                    name="How many hours do you need for the rental?"
                     id="hourCount"
                     className={styles.formControl}
                   />
@@ -239,7 +244,7 @@ const Contact = () => {
                   <input
                     type="number"
                     min="0"
-                    name="guestCount"
+                    name="Estimated guest count for photo booth bus"
                     id="guestCount"
                     className={styles.formControl}
                   />
@@ -247,15 +252,20 @@ const Contact = () => {
               </section>
             </div>
             <div>
-              <label htmlFor="source"> How did you find us?</label>
+              <label htmlFor="source">How did you find us?</label>
               <br />
-              <input type="radio" id="google" name="source" value="google" />
+              <input
+                type="radio"
+                id="google"
+                name="How did you find us?"
+                value="google"
+              />
               <label htmlFor="google"> Google</label>
               <br />
               <input
                 type="radio"
                 id="Instagram"
-                name="source"
+                name="How did you find us?"
                 value="Instagram"
               />
               <label htmlFor="Instagram"> Instagram</label>
@@ -263,7 +273,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="Facebook"
-                name="source"
+                name="How did you find us?"
                 value="Facebook"
               />
               <label htmlFor="Facebook"> Facebook</label>
@@ -271,7 +281,7 @@ const Contact = () => {
               <input
                 type="radio"
                 id="Bridal Show"
-                name="source"
+                name="How did you find us?"
                 value="Bridal Show"
               />
               <label htmlFor="Bridal Show"> Bridal Show</label>
