@@ -94,7 +94,7 @@ const Contact = () => {
                 type="radio"
                 id="serviceQuote"
                 name="details"
-                value="serviceQuote"
+                value="Service Quote"
               />
               <label htmlFor="serviceQuote"> Service Quote</label>
               <br />
@@ -102,15 +102,15 @@ const Contact = () => {
                 type="radio"
                 id="dateAvailable"
                 name="details"
-                value="dateAvailable"
+                value="Date Available"
               />
-              <label htmlFor="dateAvailable"> If my date is available</label>
+              <label htmlFor="Date Available"> If my date is available</label>
               <br />
               <input
                 type="radio"
                 id="rateAndAvailability"
                 name="details"
-                value="rateAndAvailability"
+                value="Rate And Availability"
               />
               <label htmlFor="rateAndAvailability">
                 {" "}
@@ -122,17 +122,32 @@ const Contact = () => {
             <div>
               <label htmlFor="vehicle">I'm interested in booking...</label>
               <br />
-              <input type="radio" id="stevie" name="vehicle" value="stevie" />
+              <input
+                type="radio"
+                id="stevie"
+                name="vehicle"
+                value="Stevie (‘77 VW Bus) Prop"
+              />
               <label htmlFor="stevie"> Stevie (‘77 VW Bus) Prop</label>
               <br />
-              <input type="radio" id="lindsey" name="vehicle" value="lindsey" />
+              <input
+                type="radio"
+                id="lindsey"
+                name="vehicle"
+                value="Lindsey (‘66 VW Beetle) Prop"
+              />
               <label htmlFor="lindsey"> Lindsey (‘66 VW Beetle) Prop</label>
               <br />
-              <input type="radio" id="steviePhotoBus" name="vehiclePhoto" value="stevie" />
+              <input
+                type="radio"
+                id="steviePhotoBus"
+                name="vehiclePhoto"
+                value="Stevie Photo Booth Bus"
+              />
               <label htmlFor="steviePhotoBus"> Stevie Photo Booth Bus</label>
               <br />
               <br />
-            </div> 
+            </div>
             <div>
               <label htmlFor="services">
                 I am interested in booking for...
@@ -142,7 +157,7 @@ const Contact = () => {
                 type="radio"
                 id="photoVideoShoot"
                 name="services"
-                value="photoVideoShoot"
+                value="Photo Video Shoot"
               />
               <label htmlFor="photoVideoShoot">
                 {" "}
@@ -153,7 +168,7 @@ const Contact = () => {
                 type="radio"
                 id="photoShoot"
                 name="services"
-                value="photoShoot"
+                value="Photo Shoot"
               />
               <label htmlFor="photoShoot">
                 {" "}
@@ -164,7 +179,7 @@ const Contact = () => {
                 type="radio"
                 id="miniSessions"
                 name="services"
-                value="miniSessions"
+                value="Mini Sessions"
               />
               <label htmlFor="miniSessions"> Mini Sessions</label>
               <br />
@@ -172,7 +187,7 @@ const Contact = () => {
                 type="radio"
                 id="privateParty"
                 name="services"
-                value="privateParty"
+                value="Private Party"
               />
               <label htmlFor="privateParty"> Private Party</label>
               <br />
@@ -180,7 +195,7 @@ const Contact = () => {
                 type="radio"
                 id="wedding"
                 name="services"
-                value="wedding"
+                value="Wedding"
               />
               <label htmlFor="wedding"> Wedding</label>
               <br />
@@ -200,8 +215,10 @@ const Contact = () => {
               />
             </div>
             <div>
-            <label htmlFor="hourCount">How many hours do you need for the rental?</label>
-            <section className={styles.contactName}>
+              <label htmlFor="hourCount">
+                How many hours do you need for the rental?
+              </label>
+              <section className={styles.contactName}>
                 <article>
                   <input
                     type="number"
@@ -214,8 +231,10 @@ const Contact = () => {
               </section>
             </div>
             <div>
-            <label htmlFor="guestCount">Estimated guest count for photo booth bus</label>
-            <section className={styles.contactName}>
+              <label htmlFor="guestCount">
+                Estimated guest count for photo booth bus
+              </label>
+              <section className={styles.contactName}>
                 <article>
                   <input
                     type="number"
