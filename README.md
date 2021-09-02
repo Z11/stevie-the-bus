@@ -1,5 +1,7 @@
 ### Welcome to the Stevie the Bus website :D
 
+Check out the website: www.steviethephotobus.com
+
 this website is designed to show how awesome Stevie (1977 bus) is. 
 
 The main framework used is Gatsby with a headless CMS backend called Prismic. 
