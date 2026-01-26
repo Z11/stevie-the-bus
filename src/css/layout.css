@@ -6,7 +6,7 @@
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --mainBlue: #42b4d3;
+  --mainBlue: #0d7a94;
   --mainYellow: #f4e7bb;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
@@ -28,6 +28,7 @@ body {
   background: var(--mainWhite);
   font-weight: 300;
 }
+
 h1,
 h2,
 h3,
@@ -38,6 +39,7 @@ h6 {
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
+
 main {
   min-height: 100vh;
   display: flex;
@@ -50,6 +52,7 @@ main {
     line-height: 1.5;
     font-size: 0.86rem;
   }
+
   p {
     margin-bottom: 0.5rem;
   }
@@ -61,6 +64,7 @@ main {
     line-height: 1.5;
     font-size: 1rem;
   }
+
   p {
     margin-bottom: 0.85rem;
   }
@@ -72,6 +76,7 @@ main {
     line-height: 1.7;
     font-size: 1.2rem;
   }
+
   p {
     margin-bottom: 1.25rem;
   }
