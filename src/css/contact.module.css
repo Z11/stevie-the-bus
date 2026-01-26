@@ -2,16 +2,19 @@
   width: 80vw;
   margin: 0 auto;
 }
+
 .contact-date {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
 }
+
 .submit:hover {
   background: var(--darkGrey);
   color: var(--mainWhite);
   border-color: var(--darkGrey);
 }
+
 .border {
   border: 5px var(--mainBlue);
   border-radius: 5px;
@@ -22,21 +25,56 @@
   background-color: var(--mainBlue);
 }
 
+/* Radio button styling for better touch targets */
+.contact :global(input[type="radio"]) {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  accent-color: var(--mainBlue);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.contact :global(label) {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 4px 0;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+/* Ensure radio groups have proper spacing */
+.contact :global(div > input[type="radio"]) {
+  margin-top: 0;
+}
+
+.contact :global(div > br) {
+  line-height: 0;
+}
+
 /*  Small devices (landscape phones) */
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .center {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
   .contact {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
   .contact-name {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1.5rem;
   }
+
   .formControl,
   .submit {
     width: 100%;
@@ -46,6 +84,7 @@
     border: 1px solid var(--darkGrey);
     border-radius: 0.25rem;
   }
+
   .submit {
     background-color: var(--mainYellow);
     border-color: var(--mainYellow);
@@ -65,15 +104,18 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
   .contact {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
   .contact-name {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
   }
+
   .formControl,
   .submit {
     width: 100%;
@@ -83,6 +125,7 @@
     border: 1px solid var(--darkGrey);
     border-radius: 0.25rem;
   }
+
   .submit {
     background-color: var(--mainYellow);
     border-color: var(--mainYellow);
@@ -102,15 +145,18 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
   .contact {
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
+
   .contact-name {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
   }
+
   .formControl,
   .submit {
     width: 100%;
@@ -120,6 +166,7 @@
     border: 1px solid var(--darkGrey);
     border-radius: 0.25rem;
   }
+
   .submit {
     background-color: var(--mainYellow);
     border-color: var(--mainYellow);
