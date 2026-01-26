@@ -25,7 +25,7 @@ const About = ({ data }) => {
               alt={about_image.alt || "Meet Stevie Photo"}
               width={500}
               height={400}
-              sizes="(max-width: 600px) 80vw, (max-width: 1600px) 45vw, 550px"
+              sizes="(max-width: 600px) 80vw, (max-width: 1600px) 475px, 585px"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           )}

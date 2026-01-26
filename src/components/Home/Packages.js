@@ -33,7 +33,7 @@ const Packages = ({ data }) => {
               alt={package_1_image.alt || "Package 1"}
               width={300}
               height={300}
-              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 200px, (max-width: 1600px) 280px, 365px"
+              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 280px, (max-width: 1600px) 320px, 365px"
               style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
@@ -51,7 +51,7 @@ const Packages = ({ data }) => {
               alt={package_2_image.alt || "Package 2"}
               width={300}
               height={300}
-              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 200px, (max-width: 1600px) 280px, 365px"
+              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 280px, (max-width: 1600px) 320px, 365px"
               style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
@@ -69,7 +69,7 @@ const Packages = ({ data }) => {
               alt={package_3_image.alt || "Package 3"}
               width={300}
               height={300}
-              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 200px, (max-width: 1600px) 280px, 365px"
+              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 280px, (max-width: 1600px) 320px, 365px"
               style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}

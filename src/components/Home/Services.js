@@ -26,7 +26,7 @@ const Services = ({ data }) => {
               alt={service_1_image.alt || "Service 1"}
               width={500}
               height={370}
-              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 45vw, 500px"
+              sizes="(max-width: 600px) 80vw, (max-width: 1600px) 475px, 585px"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           )}
@@ -44,7 +44,7 @@ const Services = ({ data }) => {
               alt={service_2_image.alt || "Service 2"}
               width={500}
               height={370}
-              sizes="(max-width: 600px) 80vw, (max-width: 1100px) 45vw, 500px"
+              sizes="(max-width: 600px) 80vw, (max-width: 1600px) 475px, 585px"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           )}
