@@ -23,9 +23,9 @@ const Faq = ({ data }) => {
   return (
     <section className={styles.faqs}>
       <Title title={pageTitle?.[0]?.text || 'FAQ'} position="center" />
-      <div className={styles.faqCenter}>
-        <div className={styles.faqDetails}>
-            <div className={styles.faqContainer}>
+      <div className={styles['faq-center']}>
+        <div className={styles['faq-details']}>
+            <div className={styles['faq-container']}>
               {listOfFAQs.map(item => (
                 <Accordion
                   key={item.id}
