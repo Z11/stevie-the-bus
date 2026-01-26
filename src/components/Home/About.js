@@ -1,54 +1,34 @@
+'use client'
+
 import React from "react"
+import Image from "next/image"
 import Title from "../Title"
 import styles from "../../css/about.module.css"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
-// this is causing lazy load warnigs:
-// [Intervention] An <img> element was lazyloaded with loading=lazy,
-// but had no dimensions specified. Specifying dimensions improves performance.
-// See https://crbug.com/954323
-// git hub issue: https://github.com/gatsbyjs/gatsby/issues/17506
+const About = ({ data }) => {
+  if (!data) return null
 
-const getAbout = graphql`
-  query {
-    prismic {
-      home_page(uid: "home_page_slug", lang: "en-us") {
-        about_title
-        about_text
-        about_image
-        about_imageSharp {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 500) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-const About = () => {
-  const { about_imageSharp, about_text, about_title } = useStaticQuery(
-    getAbout
-  ).prismic.home_page
+  const { about_image, about_text, about_title } = data
 
   return (
     <section className={styles.about} id="aboutStevie">
       <div className={styles.aboutCenter}>
         <article className={styles.aboutInfo}>
-          <Title title={about_title[0].text} position="left"></Title>
+          <Title title={about_title?.[0]?.text || 'About Stevie'} position="left"></Title>
           <hr className={styles.border} />
-          {about_text.map((item, index) => <p key={index}>{item.text}</p>)}
+          {about_text?.map((item, index) => <p key={index}>{item.text}</p>)}
         </article>
         <article>
-          <div>
-            <Img
-              fluid={about_imageSharp.childImageSharp.fluid}
-              alt="Meet Stevie Photo"
+          {about_image?.url && (
+            <Image
+              src={about_image.url}
+              alt={about_image.alt || "Meet Stevie Photo"}
+              width={500}
+              height={400}
+              sizes="(max-width: 600px) 80vw, (max-width: 1600px) 45vw, 550px"
+              style={{ width: '100%', height: 'auto' }}
             />
-          </div>
+          )}
         </article>
       </div>
     </section>

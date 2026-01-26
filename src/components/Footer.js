@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react"
 import styles from "../css/footer.module.css"
 import socialIcons from "../constants/social-icons"

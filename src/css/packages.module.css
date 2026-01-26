@@ -64,7 +64,8 @@
     text-align: center;
     font-size: 0.8rem;
   }
-  p {
+  .package-options-description p,
+  .package-description p {
     margin-bottom: 0.5rem;
   }
 }
@@ -94,7 +95,8 @@
     text-align: center;
     font-size: 0.8rem;
   }
-  p {
+  .package-options-description p,
+  .package-description p {
     margin-bottom: 0.5rem;
   }
 }
@@ -125,7 +127,8 @@
     text-align: center;
     font-size: 1rem;
   }
-  p {
+  .package-options-description p,
+  .package-description p {
     margin-bottom: 0.5rem;
   }
 }

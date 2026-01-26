@@ -1,18 +1,67 @@
-### Welcome to the Stevie the Bus website :D
+# Stevie the Photo Bus Website
 
-Check out the website: www.steviethephotobus.com
+This is the official website for Stevie the Photo Bus - Houston's grooviest photo booth experience.
 
-this website is designed to show how awesome Stevie (1977 bus) is. 
+## Tech Stack
 
-The main framework used is Gatsby with a headless CMS backend called Prismic. 
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Styled Components + CSS Modules
+- **CMS**: Prismic
+- **UI Components**: Material-UI
+- **Language**: JavaScript/React
 
-This website is cost only $10 a year and its top on Google ssearch for Photo Buses in Houston :D 
+## Getting Started
 
-SEO is amazing as well as the Javscript load is small !
+1. Install dependencies:
+```bash
+npm install
+```
 
-I go deeply in my design in this article i created: https://www.robertochupin.com/stevie-the-bus-website/
+2. Set up environment variables:
+   - Copy `.env.example` to `.env.local`
+   - Add your Prismic credentials
 
-![image](https://user-images.githubusercontent.com/4098471/131789980-6ee277f1-2651-4513-ab90-5b4858e2de0e.png)
+3. Run the development server:
+```bash
+npm run dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+## Environment Variables
 
+- `NEXT_PUBLIC_PRISMIC_REPOSITORY` - Your Prismic repository name
+- `PRISMIC_ACCESS_TOKEN` - Your Prismic access token
+- `NEXT_PUBLIC_GA_TRACKING_ID` - Google Analytics tracking ID (optional)
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+src/
+├── app/              # Next.js App Router pages
+├── components/       # React components
+├── constants/        # Constants and configuration
+├── css/             # CSS modules and global styles
+├── helpers/         # Utility functions
+├── lib/             # Library code (Prismic client, etc.)
+└── svgs/            # SVG assets
+```
+
+## Migration from Gatsby
+
+This project was migrated from Gatsby to Next.js 14. Key changes:
+- Gatsby's GraphQL → Prismic Client API
+- gatsby-image → next/image (where applicable)
+- Gatsby routing → Next.js App Router
+- gatsby-plugin-react-helmet → Next.js Metadata API
+
+## License
+
+MIT

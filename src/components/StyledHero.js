@@ -1,18 +1,20 @@
+'use client'
+
 import React from "react"
 import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
 
-const StyledHero = ({ img, className, children, home, isIPad13 }) => {
+const StyledHero = ({ img, className, children, home, isIPad13, alt }) => {
   return (
-    <BackgroundImage
+    <div
       className={className}
-      fluid={img}
-      home={home}
-      isIPad13={isIPad13}
-      critical={true}
+      style={{
+        backgroundImage: img ? `url(${img})` : 'none',
+      }}
+      role="img"
+      aria-label={alt || 'Hero image'}
     >
       {children}
-    </BackgroundImage>
+    </div>
   )
 }
 

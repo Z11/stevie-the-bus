@@ -1,6 +1,7 @@
+'use client'
+
 import React, { useState } from "react"
-import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+import Link from "next/link"
 import styles from "../css/navbar.module.css"
 import AlignRight from "../svgs/alignRight.svg"
 import links from "../constants/links"
@@ -17,7 +18,7 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <Link to={links[3].path} className={styles.mobileLogoBtn}>
+          <Link href={links[3].path} className={styles.mobileLogoBtn}>
             <IconStevie />
           </Link>
           <button
@@ -39,7 +40,7 @@ const NavBar = () => {
             if (item.type === "img") {
               return (
                 <li key={index} className={styles.desktopLogoBtn}>
-                  <Link to={item.path}>
+                  <Link href={item.path}>
                     <IconStevie aria-label="Home Page" />
                   </Link>
                 </li>
@@ -53,7 +54,7 @@ const NavBar = () => {
                     onClick={toggleNav}
                     onKeyDown={() => {}}
                   >
-                    <AnchorLink to={`/#${item.id}`}>{item.text}</AnchorLink>
+                    <Link href={`/#${item.id}`}>{item.text}</Link>
                   </div>
                 </li>
               )
@@ -66,7 +67,7 @@ const NavBar = () => {
                     onClick={toggleNav}
                     onKeyDown={() => {}}
                   >
-                    <Link to={item.path}>{item.text}</Link>
+                    <Link href={item.path}>{item.text}</Link>
                   </div>
                 </li>
               )

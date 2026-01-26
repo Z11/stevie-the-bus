@@ -1,129 +1,62 @@
+'use client'
+
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { makeStyles } from "@material-ui/core/styles"
-import Card from "@material-ui/core/Card"
-import CardActionArea from "@material-ui/core/CardActionArea"
-import CardContent from "@material-ui/core/CardContent"
-import Typography from "@material-ui/core/Typography"
-import { Grid } from "@material-ui/core"
+import Image from "next/image"
+import { Card, CardActionArea, CardContent, Typography, Grid } from "@mui/material"
 
-const getEvents = graphql`
-  query {
-    prismic {
-      allEventss {
-        edges {
-          node {
-            event {
-              event_description
-              event_datetime
-              event_title
-              event_link {
-                ... on PRISMIC__ExternalLink {
-                  url
-                }
-              }
-              event_image
-              event_imageSharp {
-                size
-                childImageSharp {
-                  fluid(quality: 100, maxWidth: 500, maxHeight: 500) {
-                    src
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-const useStyles = makeStyles({
+const useStyles = {
   gridContainer: {
     width: "80vw",
     margin: "0 auto",
+    mt: { xs: 3.5, sm: 4, md: 4.5, lg: 5 },
+    mb: { xs: 4, sm: 4.5, md: 5, lg: 6 },
   },
-  gridItem: {
-    align: "center",
+  card: {
+    maxWidth: { xs: 400, sm: 400, md: 500, lg: 600 },
   },
-  ["@media screen and (min-width: 300px) and (max-width: 600px)"]: {
-    root: {
-      maxWidth: 400,
-    },
-    gridContainer: {
-        marginTop: "1.75rem",
-        marginBottom: "2rem",
-      },
-  },
-  ["@media screen and (min-width: 600px) and (max-width: 1100px)"]: {
-    root: {
-      maxWidth: 400,
-    },
-    gridContainer: {
-        marginTop: "2rem",
-        marginBottom: "2.25rem",
-      },
-  },
-  ["@media screen and (min-width: 1100px) and (max-width: 1600px)"]: {
-    root: {
-      maxWidth: 500,
-    },
-    gridContainer: {
-        marginTop: "2.25rem",
-        marginBottom: "2.50rem",
-      },
-  },
-  ["@media (min-width: 1600px)"]: {
-    root: {
-      maxWidth: 600,
-    },
-    gridContainer: {
-        marginTop: "2.5rem",
-        marginBottom: "3rem",
-      },
-  },
-})
+}
 
-const Events = () => {
-  const classes = useStyles()
-
-  const events = useStaticQuery(getEvents).prismic.allEventss.edges[0].node
-    .event
+const Events = ({ events }) => {
+  if (!events || events.length === 0) {
+    return (
+      <Grid container spacing={4} justifyContent="center" sx={useStyles.gridContainer}>
+        <Grid item xs={12}>
+          <Typography variant="h5" align="center">
+            No events available at this time.
+          </Typography>
+        </Grid>
+      </Grid>
+    )
+  }
 
   return (
-    <Grid
-      container
-      spacing={4}
-      justify="center"
-      className={classes.gridContainer}
-    >
+    <Grid container spacing={4} justifyContent="center" sx={useStyles.gridContainer}>
       {events.map(
         ({
-          event_imageSharp,
+          event_image,
           event_title,
           event_description,
           event_link,
         }, index) => (
-          <Grid item xs={12} sm={6} md={4} align="center" key={index}>
-            <Card className={classes.root} >
-              <CardActionArea href={event_link.url} target="_blank">
-                <Img
-                  fluid={event_imageSharp.childImageSharp.fluid}
-                  alt="Event Card Picture"
-                />
+          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Card sx={useStyles.card}>
+              <CardActionArea href={event_link?.url} target="_blank" rel="noopener noreferrer">
+                {event_image?.url && (
+                  <Image
+                    src={event_image.url}
+                    alt={event_image.alt || event_title?.[0]?.text || 'Event'}
+                    width={500}
+                    height={500}
+                    sizes="(max-width: 768px) 400px, (max-width: 1200px) 400px, 500px"
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                )}
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    {event_title[0].text}
+                    {event_title?.[0]?.text || 'Event'}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {event_description[0].text}
+                  <Typography variant="body2" color="text.secondary" component="p">
+                    {event_description?.[0]?.text || ''}
                   </Typography>
                 </CardContent>
               </CardActionArea>

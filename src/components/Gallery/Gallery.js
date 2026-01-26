@@ -1,16 +1,21 @@
+'use client'
+
 import React, { useState } from "react"
-import Img from "gatsby-image"
+import Image from "next/image"
 import { Lightbox } from "react-modal-image"
-import useGallery from "./useGallery"
 import Grid from "./Grid"
 import Tile from "./Tile"
 import styles from "../../css/galleryImages.module.css"
 
-const Gallery = () => {
-  const images = useGallery()
+const Gallery = ({ images }) => {
   const [showImageIndex, setShowImageIndex] = useState()
+  
   const toggleTile = index => {
     setShowImageIndex(index)
+  }
+
+  if (!images || images.length === 0) {
+    return <div style={{ textAlign: 'center', padding: '50px' }}>No gallery images available.</div>
   }
 
   return (
@@ -18,14 +23,17 @@ const Gallery = () => {
       <Grid>
         {images.map((image, index) => (
           <Tile
-            key={image.id}
+            key={image.id || index}
             onClick={() => {
               toggleTile(index)
             }}
           >
-            <Img
-              alt={image.name}
-              fluid={image.fluid}
+            <Image
+              alt={image.alt || `Gallery image ${index + 1}`}
+              src={image.url}
+              fill
+              sizes="(max-width: 600px) 15rem, (max-width: 1600px) 16rem, 24rem"
+              style={{ objectFit: 'cover' }}
               className={styles.imgHover}
             />
           </Tile>
@@ -34,7 +42,7 @@ const Gallery = () => {
       {showImageIndex !== undefined && (
         <Lightbox
           hideDownload={true}
-          large={images[showImageIndex].publicURL}
+          large={images[showImageIndex].url}
           onClose={() => {
             toggleTile(undefined)
           }}
