@@ -9,7 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "update:check": "npm outdated"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

@@ -12,15 +12,25 @@ async function getGalleryData() {
       lang: 'en-us',
     })
     
-    if (galleryDocs.length > 0 && galleryDocs[0].data.body) {
-      const images = galleryDocs[0].data.body[0]?.fields?.map((field, index) => ({
-        id: field.image?.id || `img-${index}`,
-        url: field.image?.url,
-        alt: field.image?.alt || `Gallery image ${index + 1}`,
-      })) || []
+    
+    if (galleryDocs.length > 0) {      
+      const data = galleryDocs[0].data
       
-      return images
+      if (data.body && data.body.length > 0) {
+        // Try different possible structures
+        const fields = data.body[0]?.items || data.body[0]?.fields || []
+        
+        const images = fields.map((field, index) => ({
+          id: field.image?.id || `img-${index}`,
+          url: field.image?.url,
+          alt: field.image?.alt || `Gallery image ${index + 1}`,
+        }))
+        
+        return images
+      }
     }
+    
+    console.log('No gallery data found')
     return []
   } catch (error) {
     console.error('Error fetching gallery data:', error)
