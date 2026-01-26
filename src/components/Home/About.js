@@ -26,7 +26,7 @@ const About = ({ data }) => {
               width={500}
               height={400}
               sizes="(max-width: 600px) 80vw, (max-width: 1600px) 45vw, 550px"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
             />
           )}
         </article>

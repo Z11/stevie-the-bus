@@ -4,7 +4,14 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['images.prismic.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.prismic.io',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   webpack(config) {
     config.module.rules.push({

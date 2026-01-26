@@ -48,7 +48,7 @@ const Events = ({ events }) => {
                     width={500}
                     height={500}
                     sizes="(max-width: 768px) 400px, (max-width: 1200px) 400px, 500px"
-                    style={{ width: '100%', height: 'auto' }}
+                    style={{ width: '100%', height: 'auto', maxWidth: '600px' }}
                   />
                 )}
                 <CardContent>

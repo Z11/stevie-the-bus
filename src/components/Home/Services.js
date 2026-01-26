@@ -27,7 +27,7 @@ const Services = ({ data }) => {
               width={500}
               height={370}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 45vw, 500px"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
             />
           )}
           <div className={styles.serviceTitle}>
@@ -45,7 +45,7 @@ const Services = ({ data }) => {
               width={500}
               height={370}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 45vw, 500px"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
             />
           )}
           <div className={styles.serviceTitle}>

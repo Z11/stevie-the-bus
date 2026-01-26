@@ -34,7 +34,7 @@ const Packages = ({ data }) => {
               width={300}
               height={300}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 200px, (max-width: 1600px) 280px, 365px"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
           <div className={styles.packageTitle}>
@@ -52,7 +52,7 @@ const Packages = ({ data }) => {
               width={300}
               height={300}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 200px, (max-width: 1600px) 280px, 365px"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
           <div className={styles.packageTitle}>
@@ -70,7 +70,7 @@ const Packages = ({ data }) => {
               width={300}
               height={300}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 200px, (max-width: 1600px) 280px, 365px"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
           <div className={styles.packageTitle}>

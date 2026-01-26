@@ -16,14 +16,14 @@ const NavBar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navCenter}>
-        <div className={styles.navHeader}>
-          <Link href={links[3].path} className={styles.mobileLogoBtn}>
+      <div className={styles['nav-center']}>
+        <div className={styles['nav-header']}>
+          <Link href={links[3].path} className={styles['mobile-logo-btn']}>
             <IconStevie />
           </Link>
           <button
             type="button"
-            className={styles.logoAlignRight}
+            className={styles['logoAlignRight']}
             onClick={toggleNav}
           >
             <AlignRight />
@@ -32,14 +32,14 @@ const NavBar = () => {
         <ul
           className={
             isOpen
-              ? `${styles.navLinks} ${styles.showNav}`
-              : `${styles.navLinks}`
+              ? `${styles['nav-links']} ${styles['show-nav']}`
+              : `${styles['nav-links']}`
           }
         >
           {links.map((item, index) => {
             if (item.type === "img") {
               return (
-                <li key={index} className={styles.desktopLogoBtn}>
+                <li key={index} className={styles['desktop-logo-btn']}>
                   <Link href={item.path}>
                     <IconStevie aria-label="Home Page" />
                   </Link>
@@ -52,7 +52,7 @@ const NavBar = () => {
                     role="button"
                     tabIndex={0}
                     onClick={toggleNav}
-                    onKeyDown={() => {}}
+                    onKeyDown={() => { }}
                   >
                     <Link href={`/#${item.id}`}>{item.text}</Link>
                   </div>
@@ -65,7 +65,7 @@ const NavBar = () => {
                     role="button"
                     tabIndex={0}
                     onClick={toggleNav}
-                    onKeyDown={() => {}}
+                    onKeyDown={() => { }}
                   >
                     <Link href={item.path}>{item.text}</Link>
                   </div>
