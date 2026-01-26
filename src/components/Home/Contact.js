@@ -17,21 +17,21 @@ const Contact = () => {
             <div>
               <section className={styles.contactName}>
                 <article>
-                  <label htmlFor="first name">First Name</label>
+                  <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
                     name="First Name"
-                    id="first name"
+                    id="firstName"
                     className={styles.formControl}
                     placeholder="first name"
                   />
                 </article>
                 <article>
-                  <label htmlFor="last name">Last Name</label>
+                  <label htmlFor="lastName">Last Name</label>
                   <input
                     type="text"
                     name="Last Name"
-                    id="last name"
+                    id="lastName"
                     className={styles.formControl}
                     placeholder="last name"
                   />
@@ -104,7 +104,7 @@ const Contact = () => {
                 name="I would like to know..."
                 value="Date Available"
               />
-              <label htmlFor="DateAvailable"> If my date is available</label>
+              <label htmlFor="dateAvailable"> If my date is available</label>
               <br />
               <input
                 type="radio"
@@ -280,11 +280,11 @@ const Contact = () => {
               <br />
               <input
                 type="radio"
-                id="Bridal Show"
+                id="bridalShow"
                 name="How did you find us?"
                 value="Bridal Show"
               />
-              <label htmlFor="Bridal Show"> Bridal Show</label>
+              <label htmlFor="bridalShow"> Bridal Show</label>
               <br />
             </div>
             <div>

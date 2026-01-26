@@ -115,6 +115,15 @@
     margin: 0.8rem 0.2rem;
     fill: var(--mainBlue);
     transition: var(--mainTransition);
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icons a svg {
+    width: 24px;
+    height: 24px;
   }
   .icons a:hover {
     fill: var(--mainYellow);
@@ -179,6 +188,15 @@
     margin: 1rem 0.25rem;
     fill: var(--mainBlue);
     transition: var(--mainTransition);
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icons a svg {
+    width: 28px;
+    height: 28px;
   }
   .icons a:hover {
     fill: var(--mainYellow);

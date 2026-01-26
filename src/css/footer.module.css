@@ -18,12 +18,26 @@
 .links a:hover {
   color: var(--primaryColor);
 }
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 .icons a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 1rem;
   font-size: 1.3rem;
   fill: var(--mainWhite);
   transition: var(--mainTransition);
+  min-width: 48px;
+  min-height: 48px;
+}
+.icons a svg {
+  width: 24px;
+  height: 24px;
 }
 .icons a:hover {
   fill: var(--primaryColor);
