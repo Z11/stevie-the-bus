@@ -18,7 +18,7 @@ const Services = ({ data }) => {
 
   return (
     <section className={styles.services}>
-      <div className={styles.serviceCenter}>
+      <div className={styles['service-center']}>
         <article key={1}>
           {service_1_image?.url && (
             <Image
@@ -27,13 +27,13 @@ const Services = ({ data }) => {
               width={500}
               height={370}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 45vw, 500px"
-              style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           )}
-          <div className={styles.serviceTitle}>
+          <div className={styles['service-title']}>
             {service_1_title?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
-          <div className={styles.serviceDescription}>
+          <div className={styles['service-description']}>
             {service_1_text?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
@@ -45,13 +45,13 @@ const Services = ({ data }) => {
               width={500}
               height={370}
               sizes="(max-width: 600px) 80vw, (max-width: 1100px) 45vw, 500px"
-              style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           )}
-          <div className={styles.serviceTitle}>
+          <div className={styles['service-title']}>
             {service_2_title?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
-          <div className={styles.serviceDescription}>
+          <div className={styles['service-description']}>
             {service_2_text?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>

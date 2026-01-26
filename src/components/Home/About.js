@@ -12,8 +12,8 @@ const About = ({ data }) => {
 
   return (
     <section className={styles.about} id="aboutStevie">
-      <div className={styles.aboutCenter}>
-        <article className={styles.aboutInfo}>
+      <div className={styles['about-center']}>
+        <article className={styles['about-info']}>
           <Title title={about_title?.[0]?.text || 'About Stevie'} position="left"></Title>
           <hr className={styles.border} />
           {about_text?.map((item, index) => <p key={index}>{item.text}</p>)}
@@ -26,7 +26,7 @@ const About = ({ data }) => {
               width={500}
               height={400}
               sizes="(max-width: 600px) 80vw, (max-width: 1600px) 45vw, 550px"
-              style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           )}
         </article>

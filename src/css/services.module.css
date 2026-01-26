@@ -34,6 +34,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2.5rem;
+    align-items: start;
+  }
+  .service-center article {
+    display: flex;
+    flex-direction: column;
+  }
+  .service-center article img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 500 / 370;
   }
   .services {
     margin-top: 4rem;
@@ -59,6 +70,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
+    align-items: start;
+  }
+  .service-center article {
+    display: flex;
+    flex-direction: column;
+  }
+  .service-center article img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 500 / 370;
   }
   .services {
     margin-top: 6rem;

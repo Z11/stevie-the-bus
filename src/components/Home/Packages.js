@@ -25,7 +25,7 @@ const Packages = ({ data }) => {
   return (
     <section className={styles.packages} id="packagesStevie">
       <Title title={packages_main_title?.[0]?.text || 'Packages'} position="center" />
-      <div className={styles.packagesCenter}>
+      <div className={styles['packages-center']}>
         <article key={1}>
           {package_1_image?.url && (
             <Image
@@ -37,10 +37,10 @@ const Packages = ({ data }) => {
               style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
-          <div className={styles.packageTitle}>
+          <div className={styles['package-title']}>
             {package_1_title?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
-          <div className={styles.packageDescription}>
+          <div className={styles['package-description']}>
             {package_1_text?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
@@ -55,10 +55,10 @@ const Packages = ({ data }) => {
               style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
-          <div className={styles.packageTitle}>
+          <div className={styles['package-title']}>
             {package_2_title?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
-          <div className={styles.packageDescription}>
+          <div className={styles['package-description']}>
             {package_2_text?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
@@ -73,15 +73,15 @@ const Packages = ({ data }) => {
               style={{ width: '100%', height: 'auto', maxWidth: '365px' }}
             />
           )}
-          <div className={styles.packageTitle}>
+          <div className={styles['package-title']}>
             {package_3_title?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
-          <div className={styles.packageDescription}>
+          <div className={styles['package-description']}>
             {package_3_text?.map((item, index) => <p key={index}>{item.text}</p>)}
           </div>
         </article>
       </div>
-      <div className={styles.packageOptionsDescription}>
+      <div className={styles['package-options-description']}>
         {options_text?.map((item, index) => <p key={index}>{item.text}</p>)}
       </div>
     </section>
