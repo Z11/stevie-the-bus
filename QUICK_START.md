@@ -21,12 +21,12 @@ Your site is now running on Next.js 14. The dev server is working!
 
 2. Add your Prismic credentials:
    ```env
-   NEXT_PUBLIC_PRISMIC_REPOSITORY=steviethephotobus
+   NEXT_PUBLIC_PRISMIC_REPOSITORY=your_prismic_repository_name
    PRISMIC_ACCESS_TOKEN=your_actual_token_here
    ```
 
 3. Get your token from:
-   - Go to https://steviethephotobus.prismic.io/settings/apps/
+   - Go to https://your-repository-name.prismic.io/settings/apps/
    - Or Settings → API & Security → Repository security
    - Copy the "Permanent access token"
 

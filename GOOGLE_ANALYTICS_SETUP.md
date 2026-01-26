@@ -33,8 +33,8 @@ If you don't have GA4 set up yet:
 4. Click **Next** → **Create**
 5. Add a **Data Stream**:
    - Platform: **Web**
-   - Website URL: `https://www.steviethephotobus.com`
-   - Stream name: "Stevie Website"
+   - Website URL: `https://www.yourwebsite.com`
+   - Stream name: "Your Website"
 6. Copy the **Measurement ID** (starts with `G-`)
 
 ## Update Your Environment Variable

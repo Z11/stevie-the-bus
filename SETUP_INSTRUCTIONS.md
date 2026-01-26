@@ -11,7 +11,7 @@ Your Gatsby site has been successfully migrated to Next.js 14 with all Material-
 Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_PRISMIC_REPOSITORY=steviethephotobus
+NEXT_PUBLIC_PRISMIC_REPOSITORY=your_prismic_repository_name
 PRISMIC_ACCESS_TOKEN=your_actual_prismic_token_here
 NEXT_PUBLIC_GA_TRACKING_ID=your_google_analytics_id
 ```

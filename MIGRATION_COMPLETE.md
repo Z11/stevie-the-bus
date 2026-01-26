@@ -48,7 +48,7 @@ npm install
 ### 2. Set Up Environment Variables
 Create `.env.local`:
 ```env
-NEXT_PUBLIC_PRISMIC_REPOSITORY=steviethephotobus
+NEXT_PUBLIC_PRISMIC_REPOSITORY=your_prismic_repository_name
 PRISMIC_ACCESS_TOKEN=your_actual_token_here
 NEXT_PUBLIC_GA_TRACKING_ID=your_ga_id
 ```
