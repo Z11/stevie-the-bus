@@ -30,32 +30,26 @@ export default styled(StyledHero)`
   /*  Phones */
   @media screen and (min-width: 300px) and (max-width: 600px) {
     min-height: ${props => (props.home ? "calc(30vh + 60px)" : "20vh")};
+    background-attachment: scroll;
   }
 
   /*  Tablets */
   @media screen and (min-width: 600px) and (max-width: 1100px) {
     min-height: ${props => (props.home ? "calc(55vh + 79px)" : "40vh")};
+    background-attachment: scroll;
   }
 
   /*  Large devices (large desktops) */
   @media screen and (min-width: 1100px) and (max-width: 1600px) {
-    &:before,
-    &:after {
-      position: ${props => (props.isIPad13 ? "scroll" : "fixed")};
-      background-repeat: ${props => (props.isIPad13 ? "scroll" : "no-repeat")};
-      background-attachment: ${props => (props.isIPad13 ? "scroll" : "fixed")};
-    }
     min-height: ${props => (props.home ? "calc(95vh - 45px + 79px)" : "50vh")};
+    background-attachment: ${props => (props.isIPad13 ? "scroll" : "fixed")};
+    background-repeat: no-repeat;
   }
 
   /*  Extra large devices (extra large desktops) */
   @media (min-width: 1600px) {
-    &:before,
-    &:after {
-      position: "fixed";
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
     min-height: ${props => (props.home ? "calc(95vh - 45px + 92px)" : "50vh")};
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 `
