@@ -28,8 +28,10 @@ Go to your Netlify dashboard and update these settings:
 
 **Site Settings → Build & deploy → Build image selection:**
 
-- **Build image**: Select **Ubuntu Jammy 22.04** (the Focal image is being deprecated)
-  - If you don't see this option, it will be automatically updated by Netlify
+- **Build image**: Change from **Ubuntu Focal 20.04** to **Ubuntu Noble 24.04**
+  - Noble 24.04 is the newest build image
+  - Focal support ends January 1, 2026
+  - Click "Save" after changing
 
 ### 3. Set Environment Variables
 
