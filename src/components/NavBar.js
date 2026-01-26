@@ -18,13 +18,15 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <div className={styles['nav-center']}>
         <div className={styles['nav-header']}>
-          <Link href={links[3].path} className={styles['mobile-logo-btn']}>
+          <Link href={links[3].path} className={styles['mobile-logo-btn']} aria-label="Stevie the Photo Bus Home">
             <IconStevie />
           </Link>
           <button
             type="button"
             className={styles['logoAlignRight']}
             onClick={toggleNav}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
           >
             <AlignRight />
           </button>

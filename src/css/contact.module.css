@@ -50,7 +50,8 @@
     background-color: var(--mainYellow);
     border-color: var(--mainYellow);
     text-transform: uppercase;
-    color: var(--mainBlack);
+    color: #000;
+    font-weight: 700;
     transition: var(--mainTransition);
     cursor: pointer;
   }
@@ -86,7 +87,8 @@
     background-color: var(--mainYellow);
     border-color: var(--mainYellow);
     text-transform: uppercase;
-    color: var(--mainBlack);
+    color: #000;
+    font-weight: 700;
     transition: var(--mainTransition);
     cursor: pointer;
   }
@@ -122,9 +124,9 @@
     background-color: var(--mainYellow);
     border-color: var(--mainYellow);
     text-transform: uppercase;
-    color: var(--mainBlack);
+    color: #000;
+    font-weight: 700;
     transition: var(--mainTransition);
     cursor: pointer;
-    font-weight: bold;
   }
 }
