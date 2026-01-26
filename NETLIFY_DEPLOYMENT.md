@@ -26,6 +26,11 @@ Go to your Netlify dashboard and update these settings:
 - **Build command**: `npm run build` (or leave empty, netlify.toml will handle it)
 - **Publish directory**: `.next` (or leave empty, netlify.toml will handle it)
 
+**Site Settings → Build & deploy → Build image selection:**
+
+- **Build image**: Select **Ubuntu Jammy 22.04** (the Focal image is being deprecated)
+  - If you don't see this option, it will be automatically updated by Netlify
+
 ### 3. Set Environment Variables
 
 In Netlify dashboard: **Site settings → Environment variables**
