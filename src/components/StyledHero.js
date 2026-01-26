@@ -29,12 +29,12 @@ export default styled(StyledHero)`
 
   /*  Phones */
   @media screen and (min-width: 300px) and (max-width: 600px) {
-    min-height: ${props => (props.home ? "30vh" : "20vh")};
+    min-height: ${props => (props.home ? "calc(30vh + 60px)" : "20vh")};
   }
 
   /*  Tablets */
   @media screen and (min-width: 600px) and (max-width: 1100px) {
-    min-height: ${props => (props.home ? "55vh" : "40vh")};
+    min-height: ${props => (props.home ? "calc(55vh + 79px)" : "40vh")};
   }
 
   /*  Large devices (large desktops) */
@@ -45,7 +45,7 @@ export default styled(StyledHero)`
       background-repeat: ${props => (props.isIPad13 ? "scroll" : "no-repeat")};
       background-attachment: ${props => (props.isIPad13 ? "scroll" : "fixed")};
     }
-    min-height: ${props => (props.home ? "calc(95vh - 45px)" : "50vh")};
+    min-height: ${props => (props.home ? "calc(95vh - 45px + 79px)" : "50vh")};
   }
 
   /*  Extra large devices (extra large desktops) */
@@ -56,6 +56,6 @@ export default styled(StyledHero)`
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    min-height: ${props => (props.home ? "calc(95vh - 45px)" : "50vh")};
+    min-height: ${props => (props.home ? "calc(95vh - 45px + 92px)" : "50vh")};
   }
 `

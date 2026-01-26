@@ -53,9 +53,6 @@ main {
   p {
     margin-bottom: 0.5rem;
   }
-  main {
-    padding-top: 60px;
-  }
 }
 
 /*  Large devices (large desktops) */
@@ -67,9 +64,6 @@ main {
   p {
     margin-bottom: 0.85rem;
   }
-  main {
-    padding-top: 79px;
-  }
 }
 
 /*  Extra large devices (extra large desktops) */
@@ -80,8 +74,5 @@ main {
   }
   p {
     margin-bottom: 1.25rem;
-  }
-  main {
-    padding-top: 92px;
   }
 }
