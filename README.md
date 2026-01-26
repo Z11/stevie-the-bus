@@ -1,37 +1,35 @@
 # Stevie the Photo Bus Website
 
-This is the official website for Stevie the Photo Bus - Houston's grooviest photo booth experience.
+Official website for Stevie the Photo Bus - Houston's grooviest photo booth experience.
 
-**Migrated from Gatsby to Next.js 14** ✨
+**Built with Next.js 14** ✨
 
 ## Quick Start
 
-### 1. Install Dependencies
 ```bash
+# Install dependencies
 npm install
+
+# Set up environment variables (see below)
+cp .env.example .env.local
+
+# Run development server
+npm run dev
 ```
 
-### 2. Set Up Environment Variables
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Environment Variables
 
 Create `.env.local` in the root directory:
+
 ```env
 NEXT_PUBLIC_PRISMIC_REPOSITORY=your_prismic_repository_name
 PRISMIC_ACCESS_TOKEN=your_access_token_here
 NEXT_PUBLIC_GA_TRACKING_ID=G-XXXXXXXXXX
 ```
 
-### 3. Run Development Server
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-### 4. Build for Production
-```bash
-npm run build
-npm start
-```
+See [SETUP_INSTRUCTIONS.md](./SETUP_INSTRUCTIONS.md) for detailed setup guide.
 
 ## Tech Stack
 
@@ -68,10 +66,8 @@ src/
 
 ## Documentation
 
-- **[SETUP_INSTRUCTIONS.md](./SETUP_INSTRUCTIONS.md)** - Detailed setup guide
-- **[MIGRATION_COMPLETE.md](./MIGRATION_COMPLETE.md)** - Migration details from Gatsby
-- **[MIGRATION_NOTES.md](./MIGRATION_NOTES.md)** - Technical migration notes
-- **[GOOGLE_ANALYTICS_SETUP.md](./GOOGLE_ANALYTICS_SETUP.md)** - GA4 configuration guide
+- **[SETUP_INSTRUCTIONS.md](./SETUP_INSTRUCTIONS.md)** - Detailed setup and configuration
+- **[GOOGLE_ANALYTICS_SETUP.md](./GOOGLE_ANALYTICS_SETUP.md)** - GA4 setup guide
 
 ## Key Features
 
@@ -95,20 +91,27 @@ src/
 
 ### Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Import project in Vercel
+1. Push code to GitHub
+2. Import project in [Vercel](https://vercel.com)
 3. Add environment variables in project settings
-4. Deploy!
+4. Deploy automatically
+
+### Netlify
+
+The project includes `netlify.toml` configuration:
+
+1. Connect your GitHub repository
+2. Add environment variables in Site settings
+3. Ensure build image is set to **Ubuntu Noble 24.04**
+4. Deploy
 
 ### Other Platforms
 
-Ensure Node.js 18+ is available, then:
+Requires Node.js 18+:
 ```bash
 npm run build
 npm start
 ```
-
-Add environment variables in your hosting platform's dashboard.
 
 ## Development
 
@@ -124,17 +127,7 @@ npm run dev
 npm run lint
 ```
 
-## Migration from Gatsby
 
-This project was migrated from Gatsby 2 to Next.js 14. Key changes:
-
-- ✅ Gatsby GraphQL → Prismic Client API
-- ✅ gatsby-image → next/image
-- ✅ Gatsby routing → Next.js App Router
-- ✅ Material-UI v4 → MUI v5
-- ✅ gatsby-plugin-react-helmet → Next.js Metadata API
-
-See [MIGRATION_COMPLETE.md](./MIGRATION_COMPLETE.md) for full details.
 
 ## License
 
