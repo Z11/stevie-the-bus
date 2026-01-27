@@ -31,6 +31,7 @@ export default styled(StyledHero)`
   @media screen and (min-width: 300px) and (max-width: 600px) {
     min-height: ${props => (props.home ? "calc(30vh + 60px)" : "20vh")};
     background-attachment: scroll;
+    will-change: transform;
   }
 
   /*  Tablets */

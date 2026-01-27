@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="dns-prefetch" href="https://images.prismic.io" />
         <link rel="preconnect" href="https://images.prismic.io" crossOrigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body>
         <StyledComponentsRegistry>
