@@ -2,7 +2,15 @@ import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import StyledComponentsRegistry from '@/lib/registry'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Montserrat } from 'next/font/google'
 import '@/css/layout.css'
+
+const montserrat = Montserrat({
+  weight: ['300', '400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+})
 
 export const metadata = {
   metadataBase: new URL('https://www.steviethephotobus.com'),
@@ -41,7 +49,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <body>
         <StyledComponentsRegistry>
           <main>

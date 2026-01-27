@@ -31,6 +31,7 @@ export default async function HomePage() {
         home="true"
         img={data?.background_home_image?.url}
         alt={data?.background_home_image?.alt || 'Stevie the Photo Bus'}
+        priority
       />
       <About data={data} />
       <Services data={data} />
