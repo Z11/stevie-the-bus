@@ -41,6 +41,10 @@
     "nextjs",
     "photo-booth"
   ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
