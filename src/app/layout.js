@@ -50,6 +50,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.className}>
+      <head>
+        <link rel="dns-prefetch" href="https://images.prismic.io" />
+        <link rel="preconnect" href="https://images.prismic.io" crossOrigin="anonymous" />
+      </head>
       <body>
         <StyledComponentsRegistry>
           <main>
