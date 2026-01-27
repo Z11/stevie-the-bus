@@ -13,7 +13,7 @@ const StyledHero = ({ img, className, children, home, isIPad13, alt, priority })
           alt={alt || 'Hero image'}
           fill
           priority={priority}
-          quality={85}
+          quality={80}
           sizes="100vw"
           style={{
             objectFit: 'cover',
