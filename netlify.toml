@@ -5,8 +5,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Use the newer Jammy build image (Ubuntu 22.04)
+# Disable legacy prerendering (deprecated)
 [build.processing]
+  skip_processing = false
+
+[context.production.processing]
   skip_processing = false
 
 [[plugins]]
